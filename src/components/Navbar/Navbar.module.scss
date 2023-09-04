@@ -1,5 +1,5 @@
-@import '@/styles/colors.scss';
-@import '@/styles/responsive.scss';
+@import "@/styles/colors.scss";
+@import "@/styles/responsive.scss";
 
 #navbar {
   display: grid;
@@ -11,7 +11,7 @@
 
   & > div {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 
     a {
       color: white;
@@ -31,7 +31,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: -5px;
