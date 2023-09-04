@@ -1,0 +1,43 @@
+@import "./reset.scss";
+@import "./colors.scss";
+@import "./responsive.scss";
+
+* {
+  background-color: $primary;
+}
+
+@include desktop {
+  a {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+  span {
+    font-size: 16px;
+  }
+}
+
+@include tablet {
+  a {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+@include mobile {
+  a {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  span {
+    font-size: 12px;
+  }
+}
