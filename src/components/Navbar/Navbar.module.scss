@@ -1,17 +1,17 @@
-@import "@/styles/colors.scss";
+@import "@/styles/variables.scss";
 @import "@/styles/responsive.scss";
 
 #navbar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 80%;
-  height: 50px;
+  height: $navbar-height;
   margin: 0 auto;
   background-color: white;
 
   & > div {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
     a {
       color: white;

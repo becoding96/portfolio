@@ -1,9 +1,13 @@
 @import "./reset.scss";
-@import "./colors.scss";
+@import "./variables.scss";
 @import "./responsive.scss";
 
 * {
   background-color: $primary;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @include desktop {
