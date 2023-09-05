@@ -1,0 +1,72 @@
+@import "@/styles/variables.scss";
+@import "@/styles/responsive.scss";
+
+#lines {
+  z-index: -1;
+  position: fixed;
+  width: 300px;
+  height: 120px;
+  top: calc(50vh - $navbar-height);
+  left: calc(50% - 150px);
+
+  @include mobile {
+    width: 250px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 2.5rem;
+    animation: fade-in 0.7s ease;
+
+    span {
+      font-size: 1.8rem;
+      font-weight: bold;
+
+      @include mobile {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include mobile {
+      font-size: 1.25rem;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#ex {
+  position: absolute;
+  right: 60px;
+  animation: bounce 0.25s;
+  transform: rotate(10deg);
+
+  @include mobile {
+    right: 50px;
+  }
+
+  @keyframes bounce {
+    0% {
+      font-size: 1.8rem;
+    }
+    50% {
+      font-size: 2.7rem;
+    }
+    100% {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.highlight {
+  color: $highlight;
+}
