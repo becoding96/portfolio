@@ -2,12 +2,18 @@
 @import "@/styles/responsive.scss";
 
 #navbar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar-inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 80%;
   height: $navbar-height;
   margin: 0 auto;
-  background-color: white;
 
   & > div {
     display: flex;

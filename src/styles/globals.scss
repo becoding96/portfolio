@@ -3,11 +3,14 @@
 @import "./responsive.scss";
 
 * {
-  background-color: $primary;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+html {
+  background-color: $primary;
 }
 
 @include desktop {
