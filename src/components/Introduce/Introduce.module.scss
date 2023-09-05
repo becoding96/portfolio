@@ -11,6 +11,7 @@
 
   @include mobile {
     width: 250px;
+    left: calc(50% - 125px);
   }
 
   p {
