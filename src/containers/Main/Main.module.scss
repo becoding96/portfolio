@@ -11,11 +11,11 @@
 }
 
 #lines {
-  width: 240px;
+  width: 300px;
   height: 120px;
 
   @include mobile {
-    width: 200px;
+    width: 250px;
   }
 
   p {
@@ -51,12 +51,12 @@
 
 #ex {
   position: absolute;
-  right: 40px;
+  right: 60px;
   animation: bounce 0.25s;
   transform: rotate(10deg);
 
   @include mobile {
-    right: 35px;
+    right: 50px;
   }
 
   @keyframes bounce {

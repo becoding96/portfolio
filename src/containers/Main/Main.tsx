@@ -21,7 +21,7 @@ function Main() {
     <div id={styles.container}>
       <div id={styles.lines}>
         {lineLength >= 1 && (
-          <p style={{ position: "relative", marginRight: "10px" }}>
+          <p style={{ position: "relative", marginRight: "20px" }}>
             안녕하세요{" "}
             {lineLength >= 2 && (
               <span id={styles.ex} className={styles.highlight}>
@@ -34,7 +34,12 @@ function Main() {
           <p>
             <span className={styles.highlight}>
               <ReactTypingEffect
-                text={["프론트엔드", "꾸준한", "성장하는"]}
+                text={[
+                  "프론트엔드",
+                  "성장하는",
+                  "유저 친화적인",
+                  "빨리 배우는",
+                ]}
                 speed={200}
                 eraseSpeed={100}
                 eraseDelay={1500}
