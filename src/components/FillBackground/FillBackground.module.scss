@@ -1,9 +1,10 @@
 #fill {
   z-index: 100;
-  position: absolute;
+  position: fixed;
+  top: 0;
   background-color: white;
   width: 0;
-  height: 100vh;
+  height: 100%;
   animation: fill 1.5s ease;
 
   @keyframes fill {
