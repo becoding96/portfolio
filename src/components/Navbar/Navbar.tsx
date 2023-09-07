@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 1000) {
+      if (window.scrollY >= window.innerHeight) {
         setNavbarGlassClass("glass");
       } else {
         setNavbarGlassClass("");

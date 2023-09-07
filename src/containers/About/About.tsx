@@ -1,9 +1,8 @@
 import React from "react";
+import styles from "./About.module.scss";
 
 function About() {
-  return (
-    <div style={{ height: "1000px", backgroundColor: "rgb(15, 20, 31)" }}></div>
-  );
+  return <div id={styles.container}></div>;
 }
 
 export default About;
