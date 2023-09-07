@@ -27,37 +27,55 @@ html {
 }
 
 @include desktop {
-  a {
-    font-size: 16px;
+  h1 {
+    font-size: 1.5rem;
   }
-  p {
-    font-size: 16px;
+  h2 {
+    font-size: 1.4rem;
   }
-  span {
+  h3 {
+    font-size: 1.25rem;
+  }
+  a,
+  p,
+  span,
+  li {
     font-size: 16px;
   }
 }
 
 @include tablet {
-  a {
-    font-size: 14px;
+  h1 {
+    font-size: 1.4rem;
   }
-  p {
-    font-size: 14px;
+  h2 {
+    font-size: 1.3rem;
   }
-  span {
+  h3 {
+    font-size: 1.125rem;
+  }
+  a,
+  p,
+  span,
+  li {
     font-size: 14px;
   }
 }
 
 @include mobile {
-  a {
-    font-size: 12px;
+  h1 {
+    font-size: 1.25rem;
   }
-  p {
-    font-size: 12px;
+  h2 {
+    font-size: 1.1rem;
   }
-  span {
+  h3 {
+    font-size: 1.05rem;
+  }
+  a,
+  p,
+  span,
+  li {
     font-size: 12px;
   }
 }

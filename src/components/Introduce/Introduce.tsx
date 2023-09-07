@@ -20,17 +20,17 @@ function Introduce() {
   return (
     <div id={styles.lines}>
       {lineLength >= 1 && (
-        <p style={{ position: "relative", marginRight: "20px" }}>
+        <h1 style={{ position: "relative", marginRight: "20px" }}>
           안녕하세요{" "}
           {lineLength >= 2 && (
             <span id={styles.ex} className={styles.highlight}>
               !
             </span>
           )}
-        </p>
+        </h1>
       )}
       {lineLength >= 3 && (
-        <p>
+        <h1>
           <span className={styles.highlight}>
             <ReactTypingEffect
               text={["프론트엔드", "성장하는", "유저 친화적인", "빨리 배우는"]}
@@ -41,12 +41,12 @@ function Introduce() {
             />
           </span>{" "}
           개발자
-        </p>
+        </h1>
       )}
       {lineLength >= 4 && (
-        <p>
+        <h1>
           <span>백준봉</span>입니다.
-        </p>
+        </h1>
       )}
     </div>
   );

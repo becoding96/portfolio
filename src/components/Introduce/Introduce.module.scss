@@ -14,9 +14,8 @@
     left: calc(50% - 125px);
   }
 
-  p {
+  h1 {
     text-align: center;
-    font-size: 1.5rem;
     color: white;
     line-height: 2.5rem;
     animation: fade-in 0.7s ease;
@@ -28,10 +27,6 @@
       @include mobile {
         font-size: 1.4rem;
       }
-    }
-
-    @include mobile {
-      font-size: 1.25rem;
     }
 
     @keyframes fade-in {
