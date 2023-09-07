@@ -1,0 +1,68 @@
+@import "@/styles/variables.scss";
+@import "@/styles/responsive.scss";
+
+#title {
+  text-align: center;
+  color: white;
+
+  font-size: 25px;
+  padding-top: calc($navbar-height + 20px);
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+#underscore {
+  display: flex;
+  background-color: white;
+  width: 50px;
+  height: 5px;
+  margin: 10px auto 0 auto;
+}
+
+.slide-in-left {
+  @include desktop {
+    animation: silde-in-left 0.75s ease;
+  }
+
+  @include tablet {
+    animation: silde-in-left 0.75s ease;
+  }
+
+  @keyframes silde-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.slide-in-right {
+  @include desktop {
+    animation: silde-in-right 0.75s ease;
+  }
+
+  @include tablet {
+    animation: silde-in-right 0.75s ease;
+  }
+
+  @keyframes silde-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
