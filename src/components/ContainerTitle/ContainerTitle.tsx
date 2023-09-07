@@ -5,22 +5,21 @@ import styles from "./ContainerTitle.module.scss";
 
 interface ContainerTitleType {
   title: string;
-  nth: number;
+  multiplier: number;
+  direction: "slide-in-left" | "slide-in-right";
 }
 
-function ContainerTitle({ title, nth }: ContainerTitleType) {
-  const isOdd: boolean = nth % 2 === 1 ? true : false;
-  const slideDirection = isOdd ? "slide-in-left" : "slide-in-right";
+function ContainerTitle({ title, multiplier, direction }: ContainerTitleType) {
   const [showTitle, setShowTitle] = useState<boolean>(false);
   const [showUnderscore, setShowUnderscore] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight * nth - 100) {
+      if (window.scrollY >= window.innerHeight * multiplier) {
         setShowTitle(true);
       }
 
-      if (window.scrollY >= window.innerHeight * nth - 70) {
+      if (window.scrollY >= window.innerHeight * multiplier + 30) {
         setShowUnderscore(true);
       }
     };
@@ -36,14 +35,14 @@ function ContainerTitle({ title, nth }: ContainerTitleType) {
     <div id={styles.component}>
       <h2
         id={styles.title}
-        className={showTitle ? styles[slideDirection] : styles.hidden}
+        className={showTitle ? styles[direction] : styles.hidden}
       >
         {title}
       </h2>
 
       <div
         id={styles.underscore}
-        className={showUnderscore ? styles[slideDirection] : styles.hidden}
+        className={showUnderscore ? styles[direction] : styles.hidden}
       />
     </div>
   );
