@@ -6,7 +6,9 @@
   position: sticky;
   top: 0;
   width: 100%;
-  transition: background 0.5s;
+  transition:
+    background 0.75s,
+    border 0.75s;
 }
 
 .glass {
