@@ -16,11 +16,11 @@ function ContainerTitle({ title, nth }: ContainerTitleType) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight * nth) {
+      if (window.scrollY >= window.innerHeight * nth - 100) {
         setShowTitle(true);
       }
 
-      if (window.scrollY >= window.innerHeight * nth + 30) {
+      if (window.scrollY >= window.innerHeight * nth - 70) {
         setShowUnderscore(true);
       }
     };
@@ -33,16 +33,18 @@ function ContainerTitle({ title, nth }: ContainerTitleType) {
   }, []);
 
   return (
-    <div>
-      {showTitle && (
-        <p id={styles.title} className={styles[slideDirection]}>
-          {title}
-        </p>
-      )}
+    <div id={styles.component}>
+      <h2
+        id={styles.title}
+        className={showTitle ? styles[slideDirection] : styles.hidden}
+      >
+        {title}
+      </h2>
 
-      {showUnderscore && (
-        <div id={styles.underscore} className={styles[slideDirection]} />
-      )}
+      <div
+        id={styles.underscore}
+        className={showUnderscore ? styles[slideDirection] : styles.hidden}
+      />
     </div>
   );
 }
