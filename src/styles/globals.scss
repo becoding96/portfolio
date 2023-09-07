@@ -10,7 +10,7 @@
 }
 
 html {
-  background-color: $secondary;
+  background-color: $primary;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -22,7 +22,7 @@ html {
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2); /*스크롤바 뒷 배경 색상*/
+    background: rgba(255, 255, 255, 0.5); /*스크롤바 뒷 배경 색상*/
   }
 }
 

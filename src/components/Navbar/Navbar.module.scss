@@ -6,12 +6,20 @@
   position: sticky;
   top: 0;
   width: 100%;
+  transition: background 0.5s;
+}
+
+.glass {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 #navbar-inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 80%;
+  width: 70%;
   height: $navbar-height;
   margin: 0 auto;
 
@@ -40,7 +48,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -5px;
+      bottom: -7px;
       width: 0%;
       height: 2px;
       background-color: $highlight;

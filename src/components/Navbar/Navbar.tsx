@@ -1,10 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
 
 function Navbar() {
+  const [navbarGlassClass, setNavbarGlassClass] = useState<string>("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 1000) {
+        setNavbarGlassClass("glass");
+      } else {
+        setNavbarGlassClass("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div id={styles.navbar}>
+    <div id={styles.navbar} className={styles[navbarGlassClass]}>
       <div id={styles["navbar-inner"]}>
         <div className={styles.normal} style={{ justifyContent: "flex-start" }}>
           <Link href="" style={{ marginRight: "20px" }}>
