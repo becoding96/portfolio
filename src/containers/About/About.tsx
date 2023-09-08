@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import useHandleScroll from "@/hooks/useHandleScroll";
 import styles from "./About.module.scss";
 import ContainerTitle from "@/components/ContainerTitle/ContainerTitle";
 import Image from "next/image";
@@ -8,19 +9,13 @@ import Image from "next/image";
 function About() {
   const [showContents, setShowContents] = useState<boolean>(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight) {
-        setShowContents(true);
-      }
-    };
+  const handleScroll = () => {
+    if (window.scrollY >= window.innerHeight) {
+      setShowContents(true);
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  useHandleScroll(handleScroll);
 
   return (
     <div id={styles.container}>

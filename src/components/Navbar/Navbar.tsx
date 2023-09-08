@@ -1,27 +1,22 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
+import useHandleScroll from "@/hooks/useHandleScroll";
 
 function Navbar() {
   const [navbarGlassClass, setNavbarGlassClass] = useState<string>("");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight) {
-        setNavbarGlassClass("glass");
-      } else {
-        setNavbarGlassClass("");
-      }
-    };
+  const handleScroll = () => {
+    if (window.scrollY >= window.innerHeight) {
+      setNavbarGlassClass("glass");
+    } else {
+      setNavbarGlassClass("");
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  useHandleScroll(handleScroll);
 
   return (
     <div id={styles.navbar} className={styles[navbarGlassClass]}>
