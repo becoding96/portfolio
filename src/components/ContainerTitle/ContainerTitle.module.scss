@@ -7,7 +7,7 @@
 
 #title {
   position: absolute;
-  top: calc($navbar-height * 2);
+  top: calc($navbar-height * 1.9);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -16,7 +16,7 @@
 
 #underscore {
   position: absolute;
-  top: calc($navbar-height * 2 + 30px);
+  top: calc($navbar-height * 1.9 + 30px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
