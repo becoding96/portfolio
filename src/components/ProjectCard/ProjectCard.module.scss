@@ -1,0 +1,86 @@
+@import "@/styles/responsive.scss";
+@import "@/styles/variables.scss";
+
+#component {
+  position: relative;
+
+  /* desktop & tablet */
+  width: 32%;
+  margin: 0 1%;
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  & > img {
+    width: 100%;
+  }
+
+  &:hover {
+    #projectInfo {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+#projectInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 98.5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: opacity 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+  }
+
+  h4 {
+    margin-top: 0.25rem;
+    color: $sub;
+    font-weight: 600;
+  }
+
+  button {
+    position: relative;
+    margin-top: 2rem;
+    padding: 0.3rem 1rem;
+    color: rgb(10, 10, 10);
+    background: none;
+    border: 2px solid $sub;
+    transition: color 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 0;
+      height: 100%;
+      background-color: $sub;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: white;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

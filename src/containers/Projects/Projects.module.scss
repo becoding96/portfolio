@@ -5,3 +5,25 @@
   height: 120vh;
   background-color: $primary;
 }
+
+#contents {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: calc($navbar-height * 3.5);
+  transition: opacity 0.75s;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
