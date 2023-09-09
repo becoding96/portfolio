@@ -39,11 +39,11 @@ function About() {
         <div id={styles["profile-text"]}>
           <div>
             <h3 className={styles.category}>I am</h3>
-            <p>
+            <h4>
               안녕하세요.{" "}
               <span className={styles.bold}>프론트엔드 개발자 백준봉</span>
               입니다.
-            </p>
+            </h4>
             <p className={styles["margin-bottom"]}>
               <span className={styles.bold}>꾸준한 성장</span>을 중요시하며,{" "}
               <span className={styles.bold}>기술 스택의 사용 근거</span>에
