@@ -19,12 +19,12 @@ html {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgb(200, 200, 200); /* 스크롤바의 색상 */
+    background: rgb(200, 200, 200);
     border-radius: 5px;
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.5); /*스크롤바 뒷 배경 색상*/
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 
