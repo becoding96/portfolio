@@ -6,21 +6,25 @@ import ProjectModal from "../Modal/ProjectModal";
 interface ProjectCardPropsType {
   projectTitle: string;
   projectTitleEng: string;
-  projectDes: string;
-  projectDes2: string;
+  projectSummary: string;
+  projectFrom: string;
   projectImageLength: number;
   projectPeriod: string;
   projectTechStack: string[];
+  projectDes: string[];
+  projectRole: string[];
 }
 
 function ProjectCard({
   projectTitle,
   projectTitleEng,
-  projectDes,
-  projectDes2,
+  projectSummary,
+  projectFrom,
   projectImageLength,
   projectPeriod,
   projectTechStack,
+  projectDes,
+  projectRole,
 }: ProjectCardPropsType) {
   return (
     <div id={styles.component}>
@@ -33,15 +37,17 @@ function ProjectCard({
       />
       <div id={styles.projectInfo}>
         <h3>{projectTitle}</h3>
-        <h4>{projectDes}</h4>
+        <h4>{projectSummary}</h4>
         <ProjectModal
           projectTitle={projectTitle}
           projectTitleEng={projectTitleEng}
           projectImageLength={projectImageLength}
-          projectDes={projectDes}
-          projectDes2={projectDes2}
+          projectSummary={projectSummary}
+          projectFrom={projectFrom}
           projectPeriod={projectPeriod}
           projectTechStack={projectTechStack}
+          projectDes={projectDes}
+          projectRole={projectRole}
         />
       </div>
     </div>

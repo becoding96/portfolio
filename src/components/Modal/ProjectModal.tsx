@@ -7,20 +7,24 @@ interface ProjectModalPropsType {
   projectTitle: string;
   projectTitleEng: string;
   projectImageLength: number;
-  projectDes: string;
-  projectDes2: string;
+  projectSummary: string;
+  projectFrom: string;
   projectPeriod: string;
   projectTechStack: string[];
+  projectDes: string[];
+  projectRole: string[];
 }
 
 function ProjectModal({
   projectTitle,
   projectTitleEng,
   projectImageLength,
-  projectDes,
-  projectDes2,
+  projectSummary,
+  projectFrom,
   projectPeriod,
   projectTechStack,
+  projectDes,
+  projectRole,
 }: ProjectModalPropsType) {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -54,9 +58,8 @@ function ProjectModal({
   };
 
   useEffect(() => {
-    // @ts-ignore
-    const handleOutsideClick = (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
         setModalIsOpen(false);
       }
     };
@@ -70,7 +73,7 @@ function ProjectModal({
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, []);
+  }, [modalIsOpen]);
 
   return (
     <>
@@ -125,69 +128,24 @@ function ProjectModal({
                 </button>
               </div>
               <p>{projectPeriod}</p>
-              <h4>{projectDes}</h4>
-              <h4>{projectDes2}</h4>
+              <h4>{projectSummary}</h4>
+              <h4>{projectFrom}</h4>
               <div id={styles["span-div"]}>
                 {projectTechStack.map((stack, index) => (
                   <span key={index}>{stack}</span>
                 ))}
               </div>
               <div id={styles.hr} />
-              {projectTitleEng === "Repomon" && (
-                <div className={styles["project-detail"]}>
-                  <p>프로젝트 소개</p>
-                  <li>Github 레포지토리 분석 및 시각화 서비스입니다.</li>
-                  <li>
-                    ‘레포몬’이라는 몬스터가 프로젝트의 진행도(커밋, 머지, 이슈,
-                    리뷰, Fork, Star)에 따라 함께 성장합니다.
-                  </li>
-                  <li>
-                    성장한 레포몬은 다른 레포몬과 전투할 수 있고, 카드 형태로
-                    추출하여 README에 활용할 수 있습니다.
-                  </li>
-                  <p>담당 역할</p>
-                  <li>프론트엔드 팀장, 디자인</li>
-                  <li>
-                    소셜 로그인, 메인 페이지, 레포지토리 분석 페이지, 랭킹
-                    페이지, 크롬 익스텐션
-                  </li>
-                </div>
-              )}
-              {projectTitleEng === "IUJ" && (
-                <div className={styles["project-detail"]}>
-                  <p>프로젝트 소개</p>
-                  <li>학부모를 위한 부동산 매물 추천 서비스입니다.</li>
-                  <li>
-                    원하는 주변 시설을 고려한 맞춤 추천 점수가 동반된 부동산
-                    매물 리스트를 제공합니다.
-                  </li>
-                  <p>담당 역할</p>
-                  <li>프론트엔드 팀장, 디자인</li>
-                  <li>
-                    소셜 로그인, 메인 페이지, 지도 페이지, 관심 매물 페이지
-                  </li>
-                </div>
-              )}
-              {projectTitleEng === "Funteer" && (
-                <div className={styles["project-detail"]}>
-                  <p>프로젝트 소개</p>
-                  <li>기부&봉사 크라우드 펀딩 서비스입니다.</li>
-                  <li>
-                    자선 단체가 기부 또는 봉사 펀딩을 개최하면 개인 회원들이
-                    참여할 수 있습니다.
-                  </li>
-                  <li>
-                    펀딩 성공 이후 봉사 활동은 라이브 방송으로 중계되어야 하며,
-                    개인 회원들이 방송 도중 후원할 수 있습니다.
-                  </li>
-                  <p>담당 역할</p>
-                  <li>프론트엔드 팀원, 디자인</li>
-                  <li>
-                    회원가입(개인, 단체), 관리자 페이지, 충전 및 환불(아임포트),
-                    프로필 페이지, 고객센터, 서비스 소개
-                  </li>
-                </div>
-              )}
+              <div className={styles["project-detail"]}>
+                <p>프로젝트 소개</p>
+                {projectDes.map((desLi, index) => (
+                  <li key={index}>{desLi}</li>
+                ))}
+                <p>담당 역할</p>
+                {projectRole.map((role, index) => (
+                  <li key={index}>{role}</li>
+                ))}
+              </div>
             </div>
           </div>,
           document.body
