@@ -1,7 +1,7 @@
 @import "@/styles/responsive.scss";
 @import "@/styles/variables.scss";
 
-#component {
+.component {
   position: relative;
 
   /* desktop & tablet */
@@ -18,14 +18,14 @@
   }
 
   &:hover {
-    #projectInfo {
+    .projectInfo {
       visibility: visible;
       opacity: 1;
     }
   }
 }
 
-#projectInfo {
+.projectInfo {
   position: absolute;
   top: 0;
   left: 0;

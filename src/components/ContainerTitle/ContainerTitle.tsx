@@ -32,17 +32,23 @@ function ContainerTitle({ title, multiplier, direction }: ContainerTitleType) {
   }, []);
 
   return (
-    <div id={styles.component}>
+    <div className={styles.component}>
       <h2
-        id={styles.title}
-        className={showTitle ? styles[direction] : styles.hidden}
+        className={
+          showTitle
+            ? `${styles.title} ${styles[direction]}`
+            : `${styles.title} ${styles.hidden}`
+        }
       >
         {title}
       </h2>
 
       <div
-        id={styles.underscore}
-        className={showUnderscore ? styles[direction] : styles.hidden}
+        className={
+          showTitle
+            ? `${styles.underscore} ${styles[direction]}`
+            : `${styles.underscore} ${styles.hidden}`
+        }
       />
     </div>
   );

@@ -78,7 +78,7 @@ function ProjectModal({
   return (
     <>
       <button
-        id={styles["open-btn"]}
+        className={styles["open-btn"]}
         onClick={() => {
           setModalIsOpen(true);
         }}
@@ -87,8 +87,8 @@ function ProjectModal({
       </button>
       {modalIsOpen &&
         createPortal(
-          <div id={styles.modal} ref={modalRef}>
-            <div id={styles["img-div"]}>
+          <div className={styles.modal} ref={modalRef}>
+            <div className={styles["img-div"]}>
               <Image
                 src={
                   projectTitleEng !== "Funteer"
@@ -101,13 +101,13 @@ function ProjectModal({
                 loading="eager"
               />
               <button
-                id={styles["left-btn"]}
+                className={styles["left-btn"]}
                 onClick={() => handleClickBtn("left")}
               >
                 {"<"}
               </button>
               <button
-                id={styles["right-btn"]}
+                className={styles["right-btn"]}
                 onClick={() => handleClickBtn("right")}
               >
                 {">"}
@@ -116,8 +116,8 @@ function ProjectModal({
                 {imageNum} / {projectImageLength}
               </span>
             </div>
-            <div id={styles["text-div"]}>
-              <div id={styles["title-div"]}>
+            <div className={styles["text-div"]}>
+              <div className={styles["title-div"]}>
                 <h3>{projectTitle}</h3>
                 <button
                   onClick={() => {
@@ -130,12 +130,12 @@ function ProjectModal({
               <p>{projectPeriod}</p>
               <h4>{projectSummary}</h4>
               <h4>{projectFrom}</h4>
-              <div id={styles["span-div"]}>
+              <div className={styles["span-div"]}>
                 {projectTechStack.map((stack, index) => (
                   <span key={index}>{stack}</span>
                 ))}
               </div>
-              <div id={styles.hr} />
+              <div className={styles.hr} />
               <div className={styles["project-detail"]}>
                 <p>프로젝트 소개</p>
                 {projectDes.map((desLi, index) => (
