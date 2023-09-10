@@ -27,7 +27,7 @@ function ProjectCard({
   projectRole,
 }: ProjectCardPropsType) {
   return (
-    <div id={styles.component}>
+    <div className={styles.component}>
       <Image
         src={`/${projectTitleEng}/logo.webp`}
         layout="responsive"
@@ -35,7 +35,7 @@ function ProjectCard({
         height={270}
         alt={projectTitle + " 로고"}
       />
-      <div id={styles.projectInfo}>
+      <div className={styles.projectInfo}>
         <h3>{projectTitle}</h3>
         <h4>{projectSummary}</h4>
         <ProjectModal
