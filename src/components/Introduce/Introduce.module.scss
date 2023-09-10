@@ -17,15 +17,15 @@
   h1 {
     text-align: center;
     color: white;
-    line-height: 2.5rem;
+    line-height: 2.75rem;
     animation: fade-in 0.7s ease;
 
     span {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: bold;
 
       @include mobile {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
     }
 
