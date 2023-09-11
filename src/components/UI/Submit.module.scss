@@ -1,0 +1,17 @@
+@import "@/styles/variables.scss";
+
+.submit {
+  width: 20%;
+  margin: 1rem 0 0 auto;
+  padding: 0.25rem 0;
+  color: white;
+  background-color: inherit;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: $highlight;
+  }
+}
