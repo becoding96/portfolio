@@ -37,17 +37,15 @@ function About() {
           alt="프로필 이미지"
         />
         <div id={styles["profile-text"]}>
-          <div>
+          <div id={styles["i-am"]}>
             <h3 className={styles.category}>I am</h3>
             <h4>
-              안녕하세요.{" "}
-              <span className={styles.bold}>프론트엔드 개발자 백준봉</span>
+              안녕하세요. <span>프론트엔드 개발자 백준봉</span>
               입니다.
             </h4>
             <p className={styles["margin-bottom"]}>
-              <span className={styles.bold}>꾸준한 성장</span>을 중요시하며,{" "}
-              <span className={styles.bold}>기술 스택의 사용 근거</span>에
-              집중합니다.
+              <span>꾸준한 성장</span>을 중요시하며,{" "}
+              <span>기술 스택의 사용 근거</span>에 집중합니다.
             </p>
           </div>
           <div>
