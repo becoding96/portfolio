@@ -8,9 +8,9 @@
   background: linear-gradient(
     0deg,
     $primary 0%,
-    $secondary 15%,
-    $secondary 50%,
-    $secondary 85%,
+    $secondary 10%,
+    rgb(31, 33, 42) 50%,
+    $secondary 90%,
     $primary 100%
   );
   height: 85vh;
