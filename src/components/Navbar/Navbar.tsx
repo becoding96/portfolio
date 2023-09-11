@@ -9,7 +9,7 @@ function Navbar() {
   const [navbarGlassClass, setNavbarGlassClass] = useState<string>("");
 
   const handleScroll = () => {
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= window.innerHeight * 0.9) {
       setNavbarGlassClass("glass");
     } else {
       setNavbarGlassClass("");

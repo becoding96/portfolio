@@ -42,7 +42,7 @@
 #profile-image {
   margin: auto auto;
   border-radius: 100%;
-  box-shadow: 0 0 0 3px $sub;
+  box-shadow: 0 0 0 5px $sub;
 
   @include tablet {
     width: 320px;
@@ -60,13 +60,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 2rem auto 0 auto;
   color: white;
-
-  margin-left: 5rem;
-
-  @include mobile {
-    margin-left: 0;
-  }
 
   h3 {
     color: $sub;

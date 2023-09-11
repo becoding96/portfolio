@@ -43,7 +43,7 @@
   /* desktop */
   width: 41%;
   min-width: 550px;
-  max-height: 70%;
+  max-height: 90%;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -195,7 +195,7 @@
 .award-div {
   display: flex;
   align-items: center;
-  color: rgb(255, 191, 0) !important;
+  color: rgb(255, 140, 0) !important;
 
   & > svg {
     margin-right: 0.25rem;

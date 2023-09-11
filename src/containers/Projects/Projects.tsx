@@ -8,11 +8,11 @@ import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 function Projects() {
-  const multiplier: number = 1.7;
+  const multiplier: number = 1.75;
   const [showProjects, setShowProjects] = useState<boolean>(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= window.innerHeight * multiplier + 100) {
+    if (window.scrollY >= window.innerHeight * multiplier) {
       setShowProjects(true);
     }
   };
