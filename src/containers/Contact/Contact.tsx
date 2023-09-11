@@ -61,7 +61,7 @@ function Contact({
     <div id={styles.container} ref={contactRef}>
       <ContainerTitle
         title="CONTACT"
-        multiplier={2.4}
+        multiplier={multiplier - 0.3}
         direction="slide-in-left"
       />
       <form
