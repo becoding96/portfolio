@@ -1,21 +1,21 @@
-2023-09-11T11:28:28.093Z   +114ms [debug] Config loaded {"version":"2.24.27","cdkVersion":"2.91.0","constructsVersion":"10.2.69","config":{"name":"Portfolio","region":"ap-northeast-2","stage":"Junbong","ssmPrefix":"/sst/Portfolio/Junbong/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":218,"imports":[{"path":"sst","kind":"import-statement","external":true},{"path":"sst/constructs","kind":"import-statement","external":true}],"format":"esm"}},"outputs":{".sst.config.1694431707997.mjs":{"imports":[],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":129}},"bytes":311}}},"paths":{"config":"C:\\Dev\\portfolio\\sst.config.ts","root":"C:\\Dev\\portfolio","out":"C:\\Dev\\portfolio\\.sst","artifacts":"C:\\Dev\\portfolio\\.sst\\artifacts"}}
-2023-09-11T11:28:31.293Z  +3200ms [debug] Using AWS profile 
-2023-09-11T11:28:31.335Z    +42ms [debug] Created AWS client IoTClient
-2023-09-11T11:28:31.335Z     +0ms [debug] Getting IoT endpoint
-2023-09-11T11:28:31.444Z   +109ms [debug] Using IoT endpoint: a3uauy8wqhq2d0-ats.iot.ap-northeast-2.amazonaws.com
-2023-09-11T11:28:31.444Z     +0ms [debug] Initializing bootstrap context
-2023-09-11T11:28:31.445Z     +1ms [debug] Created AWS client CloudFormationClient
-2023-09-11T11:28:31.578Z   +133ms [debug] Loaded bootstrap status
-2023-09-11T11:28:31.578Z     +0ms [debug] Bootstrap context initialized {"status":"ready","version":"7.2","bucket":"sstbootstrap-apnortheast2ad48700f-w6d5a7kplhf"}
-2023-09-11T11:28:31.579Z     +1ms [debug] Created AWS client S3Client
-2023-09-11T11:28:31.674Z    +95ms [debug] Synthesizing stacks...
-2023-09-11T11:28:31.717Z    +43ms [debug] Created AWS client STSClient
-2023-09-11T11:28:31.768Z    +51ms [debug] IoT connected
-2023-09-11T11:28:31.803Z    +35ms [debug] Using identity Account: 827967698906 User: AIDA4BRVYO7NHHXDIIVYG
-2023-09-11T11:28:31.894Z    +91ms [debug] Generating types in C:\Dev\portfolio\.sst\types
-2023-09-11T11:28:31.898Z     +4ms [debug] Running 1 deferred tasks with concurrency: 15
-2023-09-11T11:28:32.100Z   +202ms [debug] 
-2023-09-11T11:28:32.100Z     +0ms [debug] Loading v2 AWS SDK
-2023-09-11T11:28:32.100Z     +0ms [debug] Finished synthesizing
-2023-09-11T11:28:32.216Z   +116ms [debug] Fetching metadata for stack Junbong-Portfolio-Site failed {"name":"NoSuchKey","$fault":"client","$metadata":{"httpStatusCode":404,"requestId":"VWMSN244WP3ZP4EP","extendedRequestId":"PXI5mEIDXPFdMMf9iGWsUd8Vn/crdnKjJnpyww+EQEOqbRWC25uz6aCAwEYxRtTwFxQoH2dHRLMtD8C3gcpH1w==","attempts":1,"totalRetryDelay":0},"Code":"NoSuchKey","Key":"stackMetadata/app.Portfolio/stage.Junbong/stack.Junbong-Portfolio-Site.json","RequestId":"VWMSN244WP3ZP4EP","HostId":"PXI5mEIDXPFdMMf9iGWsUd8Vn/crdnKjJnpyww+EQEOqbRWC25uz6aCAwEYxRtTwFxQoH2dHRLMtD8C3gcpH1w==","message":"The specified key does not exist."}
-2023-09-11T11:28:32.218Z     +2ms [debug] Created AWS client SSMClient
+2023-09-11T12:17:21.341Z   +141ms [debug] Config loaded {"version":"2.24.27","cdkVersion":"2.91.0","constructsVersion":"10.2.69","config":{"name":"Portfolio","region":"ap-northeast-2","stage":"Junbong","ssmPrefix":"/sst/Portfolio/Junbong/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":218,"imports":[{"path":"sst","kind":"import-statement","external":true},{"path":"sst/constructs","kind":"import-statement","external":true}],"format":"esm"}},"outputs":{".sst.config.1694434641223.mjs":{"imports":[],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":129}},"bytes":311}}},"paths":{"config":"C:\\Dev\\portfolio\\sst.config.ts","root":"C:\\Dev\\portfolio","out":"C:\\Dev\\portfolio\\.sst","artifacts":"C:\\Dev\\portfolio\\.sst\\artifacts"}}
+2023-09-11T12:17:25.303Z  +3962ms [debug] Using AWS profile 
+2023-09-11T12:17:25.355Z    +52ms [debug] Created AWS client IoTClient
+2023-09-11T12:17:25.355Z     +0ms [debug] Getting IoT endpoint
+2023-09-11T12:17:25.455Z   +100ms [debug] Using IoT endpoint: a3uauy8wqhq2d0-ats.iot.ap-northeast-2.amazonaws.com
+2023-09-11T12:17:25.456Z     +1ms [debug] Initializing bootstrap context
+2023-09-11T12:17:25.457Z     +1ms [debug] Created AWS client CloudFormationClient
+2023-09-11T12:17:25.592Z   +135ms [debug] Loaded bootstrap status
+2023-09-11T12:17:25.592Z     +0ms [debug] Bootstrap context initialized {"status":"ready","version":"7.2","bucket":"sstbootstrap-apnortheast2ad48700f-w6d5a7kplhf"}
+2023-09-11T12:17:25.593Z     +1ms [debug] Created AWS client S3Client
+2023-09-11T12:17:25.695Z   +102ms [debug] Synthesizing stacks...
+2023-09-11T12:17:25.739Z    +44ms [debug] Created AWS client STSClient
+2023-09-11T12:17:25.785Z    +46ms [debug] IoT connected
+2023-09-11T12:17:25.830Z    +45ms [debug] Using identity Account: 827967698906 User: AIDA4BRVYO7NHHXDIIVYG
+2023-09-11T12:17:25.927Z    +97ms [debug] Generating types in C:\Dev\portfolio\.sst\types
+2023-09-11T12:17:25.932Z     +5ms [debug] Running 1 deferred tasks with concurrency: 15
+2023-09-11T12:17:26.145Z   +213ms [debug] 
+2023-09-11T12:17:26.145Z     +0ms [debug] Loading v2 AWS SDK
+2023-09-11T12:17:26.146Z     +1ms [debug] Finished synthesizing
+2023-09-11T12:17:26.300Z   +154ms [debug] Fetching metadata for stack Junbong-Portfolio-Site failed {"name":"NoSuchKey","$fault":"client","$metadata":{"httpStatusCode":404,"requestId":"RJQJQC7MSQ6N24SY","extendedRequestId":"GYFu/hSrs9bYJ9qtAxOgGdnz2gZZE++jAatQAVNsBX1jcOxuLcOuu0VbExQviaeUXvLATp8+VYI=","attempts":1,"totalRetryDelay":0},"Code":"NoSuchKey","Key":"stackMetadata/app.Portfolio/stage.Junbong/stack.Junbong-Portfolio-Site.json","RequestId":"RJQJQC7MSQ6N24SY","HostId":"GYFu/hSrs9bYJ9qtAxOgGdnz2gZZE++jAatQAVNsBX1jcOxuLcOuu0VbExQviaeUXvLATp8+VYI=","message":"The specified key does not exist."}
+2023-09-11T12:17:26.302Z     +2ms [debug] Created AWS client SSMClient
