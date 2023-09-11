@@ -11,7 +11,7 @@ function Introduce() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLineLength(lineLength + 1);
-    }, 500);
+    }, 300);
 
     if (lineLength === 5) {
       clearTimeout(timer);
