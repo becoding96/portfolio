@@ -2,6 +2,9 @@
 @import "@/styles/responsive.scss";
 
 #container {
+  position: relative;
+  z-index: 2;
+
   background-color: $secondary;
   height: 85vh;
 

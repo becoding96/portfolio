@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Introduce.module.scss";
 import ReactTypingEffect from "react-typing-effect";
+import { FiArrowRight } from "react-icons/fi";
 
 function Introduce() {
   const [lineLength, setLineLength] = useState<number>(0);
@@ -10,9 +11,9 @@ function Introduce() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLineLength(lineLength + 1);
-    }, 700);
+    }, 500);
 
-    if (lineLength === 4) {
+    if (lineLength === 5) {
       clearTimeout(timer);
     }
   }, [lineLength]);
@@ -47,6 +48,16 @@ function Introduce() {
         <h1>
           <span>백준봉</span>입니다.
         </h1>
+      )}
+      {lineLength >= 5 && (
+        <button
+          id={styles["scroll-btn"]}
+          onClick={() => {
+            scrollTo({ top: window.innerHeight, behavior: "smooth" });
+          }}
+        >
+          <span>View my work</span> <FiArrowRight id={styles.arrow} />
+        </button>
       )}
     </div>
   );

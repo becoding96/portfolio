@@ -33,6 +33,7 @@
 
 .modal {
   position: fixed;
+  z-index: 100;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -170,7 +171,7 @@
       margin: 0.5rem 0.3rem 0 0;
 
       &:hover {
-        background-color: rgba(120, 120, 120, 0.2);
+        background-color: rgba(39, 39, 39, 0.2);
       }
     }
   }
@@ -188,5 +189,15 @@
   }
   li {
     margin: 0 0 0.2rem 0.2rem;
+  }
+}
+
+.award-div {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 191, 0) !important;
+
+  & > svg {
+    margin-right: 0.25rem;
   }
 }

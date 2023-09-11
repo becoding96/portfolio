@@ -17,7 +17,6 @@ export default function Home() {
       <FillBackground />
       <Navbar />
       <Main />
-      <Introduce />
       <About />
       <Projects />
     </>

@@ -1,13 +1,22 @@
 @import "@/styles/variables.scss";
 @import "@/styles/responsive.scss";
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #lines {
-  z-index: -1;
   position: fixed;
   width: 300px;
   height: 120px;
-  top: calc(50vh - $navbar-height);
+  top: calc(50vh - $navbar-height * 1.5);
   left: calc(50% - 150px);
+  text-align: center;
 
   @include mobile {
     width: 250px;
@@ -15,10 +24,9 @@
   }
 
   h1 {
-    text-align: center;
     color: white;
     line-height: 2.75rem;
-    animation: fade-in 0.7s ease;
+    animation: fade-in 0.5s ease;
 
     span {
       font-size: 2rem;
@@ -28,22 +36,13 @@
         font-size: 1.5rem;
       }
     }
-
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
   }
 }
 
 #ex {
   position: absolute;
   right: 60px;
-  animation: bounce 0.25s;
+  animation: bounce 0.2s;
   transform: rotate(10deg);
 
   @include mobile {
@@ -55,7 +54,7 @@
       font-size: 1.8rem;
     }
     50% {
-      font-size: 2.7rem;
+      font-size: 2.3rem;
     }
     100% {
       font-size: 1.8rem;
@@ -65,4 +64,40 @@
 
 .highlight {
   color: $highlight;
+}
+
+#scroll-btn {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: inherit;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.5s;
+  animation: fade-in 0.5s ease;
+
+  &:hover {
+    border: 2px solid $sub;
+    background-color: $sub;
+
+    #arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  #arrow {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.5s;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
 }
