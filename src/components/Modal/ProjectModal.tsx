@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./ProjectModal.module.scss";
 import { createPortal } from "react-dom";
 import { BiAward } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
 
 interface ProjectModalPropsType {
   projectTitle: string;
@@ -78,6 +79,12 @@ function ProjectModal({
     };
   }, [modalIsOpen]);
 
+  const onClickGithubIcon = () => {
+    const url = `https://github.com/becoding96/${projectTitleEng.toLocaleLowerCase()}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <button
@@ -120,8 +127,11 @@ function ProjectModal({
               </span>
             </div>
             <div className={styles["text-div"]}>
-              <div className={styles["title-div"]}>
-                <h3>{projectTitle}</h3>
+              <div className={styles["first-line"]}>
+                <div className={styles["title-div"]}>
+                  <h3>{projectTitle}</h3>
+                  <BsGithub onClick={onClickGithubIcon} />
+                </div>
                 <button
                   onClick={() => {
                     setModalIsOpen(false);
