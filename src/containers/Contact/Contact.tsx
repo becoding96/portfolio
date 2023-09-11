@@ -9,7 +9,11 @@ import Textarea from "@/components/UI/Textarea";
 import Submit from "@/components/UI/Submit";
 import Footer from "@/components/Footer/Footer";
 
-function Contact() {
+function Contact({
+  contactRef,
+}: {
+  contactRef: React.MutableRefObject<HTMLDivElement | null>;
+}) {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,7 +47,7 @@ function Contact() {
   };
 
   return (
-    <div id={styles.container}>
+    <div id={styles.container} ref={contactRef}>
       <ContainerTitle
         title="CONTACT"
         multiplier={2.5}

@@ -2,9 +2,13 @@ import React from "react";
 import styles from "./Main.module.scss";
 import Introduce from "@/components/Introduce/Introduce";
 
-function Main() {
+function Main({
+  homeRef,
+}: {
+  homeRef: React.MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div id={styles.container}>
+    <div ref={homeRef} id={styles.container}>
       <Introduce />
     </div>
   );

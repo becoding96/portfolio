@@ -6,7 +6,11 @@ import styles from "./About.module.scss";
 import ContainerTitle from "@/components/ContainerTitle/ContainerTitle";
 import Image from "next/image";
 
-function About() {
+function About({
+  aboutRef,
+}: {
+  aboutRef: React.MutableRefObject<HTMLDivElement | null>;
+}) {
   const [showContents, setShowContents] = useState<boolean>(false);
 
   const handleScroll = () => {
@@ -18,7 +22,7 @@ function About() {
   useHandleScroll(handleScroll);
 
   return (
-    <div id={styles.container}>
+    <div id={styles.container} ref={aboutRef}>
       <ContainerTitle
         title="ABOUT"
         multiplier={0.9}

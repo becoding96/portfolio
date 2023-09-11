@@ -7,7 +7,11 @@ import styles from "./Projects.module.scss";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
-function Projects() {
+function Projects({
+  projectsRef,
+}: {
+  projectsRef: React.MutableRefObject<HTMLDivElement | null>;
+}) {
   const multiplier: number = 1.75;
   const [showProjects, setShowProjects] = useState<boolean>(false);
 
@@ -20,7 +24,7 @@ function Projects() {
   useHandleScroll(handleScroll);
 
   return (
-    <div id={styles.container}>
+    <div id={styles.container} ref={projectsRef}>
       <ContainerTitle
         title="PROJECTS"
         multiplier={multiplier}

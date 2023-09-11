@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useRef } from "react";
 import dynamic from "next/dynamic";
 import FillBackground from "@/components/FillBackground/FillBackground";
 import Navbar from "@/components/Navbar/Navbar";
@@ -12,15 +15,33 @@ export default function Home() {
     ssr: false,
   });
 
+  const homeRef = useRef<HTMLDivElement | null>(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <>
       <Cursor />
       <FillBackground />
-      <Navbar />
-      <Main />
-      <About />
-      <Projects />
-      <Contact />
+      <Navbar
+        scrollToHome={() =>
+          homeRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollToAbout={() =>
+          aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollToProjects={() =>
+          projectsRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollToContact={() =>
+          contactRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
+      />
+      <Main homeRef={homeRef} />
+      <About aboutRef={aboutRef} />
+      <Projects projectsRef={projectsRef} />
+      <Contact contactRef={contactRef} />
       <Footer />
     </>
   );
