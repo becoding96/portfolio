@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./ProjectModal.module.scss";
 import { createPortal } from "react-dom";
+import { BiAward } from "react-icons/bi";
 
 interface ProjectModalPropsType {
   projectTitle: string;
@@ -13,6 +14,7 @@ interface ProjectModalPropsType {
   projectTechStack: string[];
   projectDes: string[];
   projectRole: string[];
+  projectAward?: string;
 }
 
 function ProjectModal({
@@ -25,6 +27,7 @@ function ProjectModal({
   projectTechStack,
   projectDes,
   projectRole,
+  projectAward,
 }: ProjectModalPropsType) {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -129,7 +132,10 @@ function ProjectModal({
               </div>
               <p>{projectPeriod}</p>
               <h4>{projectSummary}</h4>
-              <h4>{projectFrom}</h4>
+              <h4 style={{ color: "rgb(20, 20, 20)" }}>{projectFrom}</h4>
+              <h4 className={styles["award-div"]}>
+                {projectAward && <BiAward />} {projectAward}
+              </h4>
               <div className={styles["span-div"]}>
                 {projectTechStack.map((stack, index) => (
                   <span key={index}>{stack}</span>

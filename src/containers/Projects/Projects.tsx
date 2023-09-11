@@ -34,7 +34,8 @@ function Projects() {
           projectTitle="레포몬"
           projectTitleEng="Repomon"
           projectSummary="Github 레포지토리 분석 및 시각화 서비스"
-          projectFrom="삼성 청년 SW 아카데미 자율 프로젝트 (우수상 - 2등)"
+          projectFrom="삼성 청년 SW 아카데미 자율 프로젝트"
+          projectAward="우수상 (2등)"
           projectImageLength={10}
           projectPeriod="2023.04.10 ~ 2023.05.19"
           projectTechStack={[

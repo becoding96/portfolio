@@ -13,6 +13,7 @@ interface ProjectCardPropsType {
   projectTechStack: string[];
   projectDes: string[];
   projectRole: string[];
+  projectAward?: string;
 }
 
 function ProjectCard({
@@ -25,6 +26,7 @@ function ProjectCard({
   projectTechStack,
   projectDes,
   projectRole,
+  projectAward,
 }: ProjectCardPropsType) {
   return (
     <div className={styles.component}>
@@ -48,6 +50,7 @@ function ProjectCard({
           projectTechStack={projectTechStack}
           projectDes={projectDes}
           projectRole={projectRole}
+          projectAward={projectAward}
         />
       </div>
     </div>
