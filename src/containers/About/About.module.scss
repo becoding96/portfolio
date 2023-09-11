@@ -50,8 +50,8 @@
   }
 
   @include mobile {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 3rem auto;
   }
 }
@@ -82,11 +82,16 @@
     background-color: rgba(120, 120, 120, 0.3);
     border-radius: 5px;
     text-align: center;
-    padding: 0.2rem 0.5rem;
     margin-right: 0.3rem;
+    padding: 0.2rem 0.5rem;
 
     &:hover {
       background-color: rgba(120, 120, 120, 0.2);
+    }
+
+    @include mobile {
+      margin-right: 0.2rem;
+      padding: 0.1rem 0.25rem;
     }
   }
 }
