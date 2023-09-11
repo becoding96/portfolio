@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./Contact.module.scss";
 import ContainerTitle from "@/components/ContainerTitle/ContainerTitle";
 import emailjs from "@emailjs/browser";
@@ -8,6 +8,7 @@ import Input from "@/components/UI/Input";
 import Textarea from "@/components/UI/Textarea";
 import Submit from "@/components/UI/Submit";
 import Footer from "@/components/Footer/Footer";
+import useHandleScroll from "@/hooks/useHandleScroll";
 
 function Contact({
   contactRef,
@@ -15,6 +16,16 @@ function Contact({
   contactRef: React.MutableRefObject<HTMLDivElement | null>;
 }) {
   const formRef = useRef<HTMLFormElement | null>(null);
+  const [showForm, setShowForm] = useState<boolean>(false);
+  const multiplier: number = 2.4;
+
+  const handleScroll = () => {
+    if (window.scrollY >= window.innerHeight * multiplier) {
+      setShowForm(true);
+    }
+  };
+
+  useHandleScroll(handleScroll);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,10 +61,15 @@ function Contact({
     <div id={styles.container} ref={contactRef}>
       <ContainerTitle
         title="CONTACT"
-        multiplier={2.5}
+        multiplier={2.4}
         direction="slide-in-left"
       />
-      <form id={styles.form} ref={formRef} onSubmit={handleSubmit}>
+      <form
+        id={styles.form}
+        className={showForm ? styles.visible : styles.hidden}
+        ref={formRef}
+        onSubmit={handleSubmit}
+      >
         <p>Your Email Address</p>
         <Input name="user_email" type="text" height="25px" />
         <p>Message</p>
