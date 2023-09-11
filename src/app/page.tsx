@@ -2,9 +2,10 @@ import dynamic from "next/dynamic";
 import FillBackground from "@/components/FillBackground/FillBackground";
 import Navbar from "@/components/Navbar/Navbar";
 import Main from "@/containers/Main/Main";
-import Introduce from "@/components/Introduce/Introduce";
 import About from "@/containers/About/About";
 import Projects from "@/containers/Projects/Projects";
+import Contact from "@/containers/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   const Cursor = dynamic(() => import("@/components/Cursor/Cursor"), {
@@ -19,6 +20,8 @@ export default function Home() {
       <Main />
       <About />
       <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }
