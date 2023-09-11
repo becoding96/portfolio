@@ -11,16 +11,11 @@ interface ContainerTitleType {
 
 function ContainerTitle({ title, multiplier, direction }: ContainerTitleType) {
   const [showTitle, setShowTitle] = useState<boolean>(false);
-  const [showUnderscore, setShowUnderscore] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= window.innerHeight * multiplier) {
         setShowTitle(true);
-      }
-
-      if (window.scrollY >= window.innerHeight * multiplier + 30) {
-        setShowUnderscore(true);
       }
     };
 
