@@ -93,7 +93,7 @@ function ProjectModal({
           setModalIsOpen(true);
         }}
       >
-        자세히 보기
+        LEARN MORE
       </button>
       {modalIsOpen &&
         createPortal(

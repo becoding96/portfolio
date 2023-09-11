@@ -7,6 +7,10 @@
 
   height: 65vh;
   background-color: $primary;
+
+  @include mobile {
+    height: 100vh;
+  }
 }
 
 #contents {
