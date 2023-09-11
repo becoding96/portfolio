@@ -17,6 +17,15 @@
   & > img {
     width: 100%;
   }
+
+  @media (hover: hover) {
+    &:hover {
+      .projectInfo {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .projectInfo {
@@ -49,16 +58,10 @@
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .component:hover .projectInfo {
+@media (hover: none) {
+  .projectInfo {
     visibility: visible;
     opacity: 1;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .component:active .projectInfo {
-    visibility: visible;
-    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
   }
 }
