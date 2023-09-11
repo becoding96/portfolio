@@ -25,15 +25,21 @@ function Footer() {
 
   return (
     <div id={styles.component}>
-      <button onClick={handleClickGithubBtn}>
-        <BsGithub onClick={handleClickGithubBtn} />
-      </button>
-      <button onClick={handleClickVelogBtn}>
-        <SiVelog onClick={handleClickVelogBtn} />
-      </button>
-      <button onClick={handleClickEmailBtn}>
-        <AiOutlineMail onClick={handleClickEmailBtn} />
-      </button>
+      <div className={styles["btn-div"]}>
+        <button onClick={handleClickGithubBtn}>
+          <BsGithub onClick={handleClickGithubBtn} />
+        </button>
+        <button onClick={handleClickVelogBtn}>
+          <SiVelog onClick={handleClickVelogBtn} />
+        </button>
+        <button onClick={handleClickEmailBtn}>
+          <AiOutlineMail onClick={handleClickEmailBtn} />
+        </button>
+      </div>
+      <div className={styles["p-div"]}>
+        <p>ⓒ2023 Junbong.</p>
+        <p>All Rights Reserved.</p>
+      </div>
     </div>
   );
 }
