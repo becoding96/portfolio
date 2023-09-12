@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Introduce.module.scss";
 import ReactTypingEffect from "react-typing-effect";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowDown } from "react-icons/fi";
 
 function Introduce() {
   const [lineLength, setLineLength] = useState<number>(0);
@@ -56,7 +56,7 @@ function Introduce() {
             scrollTo({ top: window.innerHeight, behavior: "smooth" });
           }}
         >
-          <span>View my work</span> <FiArrowRight id={styles.arrow} />
+          <span>View my work</span> <FiArrowDown id={styles.arrow} />
         </button>
       )}
     </div>
