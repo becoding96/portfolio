@@ -1,0 +1,26 @@
+import { SSTConfig } from "sst";
+import { Bucket, NextjsSite } from "sst/constructs";
+
+export default {
+  config(_input) {
+    return {
+      name: "Portfolio",
+      region: "ap-northeast-2",
+    };
+  },
+  stacks(app) {
+    app.stack(function Site({ stack }) {
+      const bucket = new Bucket(stack, "public");
+
+      const site = new NextjsSite(stack, "site", {
+        bind: [bucket],
+        edge: true,
+        customDomain: "becoding96.com",
+      });
+
+      stack.addOutputs({
+        SiteUrl: site.url,
+      });
+    });
+  },
+} satisfies SSTConfig;
