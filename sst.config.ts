@@ -1,5 +1,5 @@
 import { SSTConfig } from "sst";
-import { Bucket, NextjsSite } from "sst/constructs";
+import { NextjsSite } from "sst/constructs";
 
 export default {
   config(_input) {
@@ -10,10 +10,7 @@ export default {
   },
   stacks(app) {
     app.stack(function Site({ stack }) {
-      const bucket = new Bucket(stack, "public");
-
       const site = new NextjsSite(stack, "site", {
-        bind: [bucket],
         edge: true,
         customDomain: "becoding96.com",
       });
