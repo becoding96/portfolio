@@ -108,6 +108,7 @@ function ProjectModal({
                 alt="프로젝트 이미지"
                 width={800}
                 height={800}
+                priority={true}
                 loading="eager"
               />
               <button
