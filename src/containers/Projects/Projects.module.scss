@@ -5,15 +5,12 @@
   position: relative;
   z-index: 2;
 
-  height: 65vh;
+  min-height: 65vh;
   background-color: $primary;
-
-  @include mobile {
-    height: 100vh;
-  }
 }
 
 #contents {
+  z-index: 5;
   display: flex;
   width: 70%;
   margin: 0 auto;
@@ -21,7 +18,7 @@
   transition: opacity 0.75s;
 
   @include tablet {
-    width: 85%;
+    width: 95%;
   }
 
   @include mobile {
