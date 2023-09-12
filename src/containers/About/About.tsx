@@ -25,7 +25,7 @@ function About({
     <div id={styles.container} ref={aboutRef}>
       <ContainerTitle
         title="ABOUT"
-        multiplier={0.8}
+        multiplier={0.75}
         direction="slide-in-left"
       />
       <div

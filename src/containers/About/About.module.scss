@@ -34,6 +34,7 @@
   }
 
   @include mobile {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-top: calc($navbar-height * 3);
@@ -76,9 +77,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
   color: white;
   line-height: 1.5rem;
+
+  @include tablet {
+    margin: 4rem auto 0 auto;
+  }
+
+  @include mobile {
+    margin: 2rem auto 0 auto;
+  }
 
   h3 {
     color: $sub;
