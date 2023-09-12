@@ -17,6 +17,7 @@ function Contact({
   const formRef = useRef<HTMLFormElement | null>(null);
   const [showForm, setShowForm] = useState<boolean>(false);
   const multiplier: number = 2.4;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const handleScroll = () => {
     if (window.scrollY >= window.innerHeight * multiplier) {
@@ -30,6 +31,24 @@ function Contact({
     e.preventDefault();
 
     if (formRef && formRef.current) {
+      const userEmailInput = formRef.current.elements.namedItem(
+        "user_email"
+      ) as HTMLInputElement;
+
+      if (!emailRegex.test(userEmailInput.value)) {
+        alert("유효한 이메일 주소를 입력해주세요.");
+        return;
+      }
+
+      const messageTextarea = formRef.current.elements.namedItem(
+        "message"
+      ) as HTMLTextAreaElement;
+
+      if (messageTextarea.value.length < 10) {
+        alert("메시지는 10글자 이상이어야 합니다.");
+        return;
+      }
+
       emailjs
         .sendForm(
           process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID!,
