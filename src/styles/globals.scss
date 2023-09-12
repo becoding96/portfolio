@@ -49,6 +49,25 @@ html {
   }
 }
 
+@include desktop125 {
+  h1 {
+    font-size: 1.625rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h4,
+  a,
+  p,
+  span,
+  li {
+    font-size: 15px;
+  }
+}
+
 @include tablet {
   h1 {
     font-size: 1.5rem;
@@ -81,10 +100,8 @@ html {
   h4,
   a,
   p,
+  span,
   li {
-    font-size: 12px;
-  }
-  span {
     font-size: 10px;
   }
 }
