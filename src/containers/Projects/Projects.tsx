@@ -72,7 +72,6 @@ function Projects({
           projectTechStack={[
             "React",
             "Vite",
-            "Kakao Map API",
             "TypeScript",
             "SCSS",
             "Git",

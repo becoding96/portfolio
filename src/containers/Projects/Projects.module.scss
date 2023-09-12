@@ -20,6 +20,10 @@
   padding-top: calc($navbar-height * 3.5);
   transition: opacity 0.75s;
 
+  @include tablet {
+    width: 90%;
+  }
+
   @include mobile {
     flex-direction: column;
   }

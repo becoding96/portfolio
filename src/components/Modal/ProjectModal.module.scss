@@ -95,6 +95,10 @@
     &:hover {
       background-color: rgba(10, 10, 10, 0.7);
     }
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
   }
 
   & > span {
@@ -190,6 +194,10 @@
 
       &:hover {
         background-color: rgba(39, 39, 39, 0.4);
+      }
+
+      @include mobile {
+        padding: 0.15rem 0.3rem;
       }
     }
   }
