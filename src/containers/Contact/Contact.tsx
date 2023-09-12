@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 import Input from "@/components/UI/Input";
 import Textarea from "@/components/UI/Textarea";
 import Submit from "@/components/UI/Submit";
-import Footer from "@/components/Footer/Footer";
 import useHandleScroll from "@/hooks/useHandleScroll";
 
 function Contact({
@@ -33,10 +32,10 @@ function Contact({
     if (formRef && formRef.current) {
       emailjs
         .sendForm(
-          "service_mmiue6p",
-          "template_ng062vj",
+          process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID!,
           formRef.current,
-          "nxGcPR0jK2qbwVt6l"
+          process.env.NEXT_PUBLIC_EMAIL_JS_API_KEY!
         )
         .then(
           (result) => {
