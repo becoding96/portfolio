@@ -93,7 +93,7 @@ function ProjectModal({
           setModalIsOpen(true);
         }}
       >
-        LEARN MORE
+        READ MORE
       </button>
       {modalIsOpen &&
         createPortal(
