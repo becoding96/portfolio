@@ -6,6 +6,10 @@
   z-index: 2;
   height: 90vh;
   background: linear-gradient(0deg, rgb(8, 8, 15) 0%, $primary 100%);
+
+  @include mobile {
+    height: 110vh;
+  }
 }
 
 #form {

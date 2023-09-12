@@ -12,7 +12,7 @@ function Projects({
 }: {
   projectsRef: React.MutableRefObject<HTMLDivElement | null>;
 }) {
-  const multiplier: number = 1.65;
+  const multiplier: number = 1.5;
   const [showProjects, setShowProjects] = useState<boolean>(false);
 
   const handleScroll = () => {
@@ -27,7 +27,7 @@ function Projects({
     <div id={styles.container} ref={projectsRef}>
       <ContainerTitle
         title="PROJECTS"
-        multiplier={multiplier - 0.3}
+        multiplier={multiplier - 0.25}
         direction="slide-in-right"
       />
       <div
