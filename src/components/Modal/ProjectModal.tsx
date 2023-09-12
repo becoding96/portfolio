@@ -102,12 +102,12 @@ function ProjectModal({
               <Image
                 src={
                   projectTitleEng !== "Funteer"
-                    ? `/${projectTitleEng}/${imageNum}.${fileEx}`
+                    ? `/${projectTitleEng}/image${imageNum}.${fileEx}`
                     : "/Funteer/logo.webp"
                 }
                 alt="프로젝트 이미지"
-                width={1000}
-                height={1000}
+                width={800}
+                height={800}
                 loading="eager"
               />
               <button
