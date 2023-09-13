@@ -4,9 +4,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./Introduce.module.scss";
 import ReactTypingEffect from "react-typing-effect";
 import { FiArrowDown } from "react-icons/fi";
+import useHandleScroll from "@/hooks/useHandleScroll";
 
 function Introduce() {
   const [lineLength, setLineLength] = useState<number>(0);
+  const [showIntroduce, setShowIntroduce] = useState<boolean>(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,6 +19,20 @@ function Introduce() {
       clearTimeout(timer);
     }
   }, [lineLength]);
+
+  const handleScroll = () => {
+    if (window.scrollY >= window.innerHeight * 2) {
+      setShowIntroduce(false);
+    } else {
+      setShowIntroduce(true);
+    }
+  };
+
+  useHandleScroll(handleScroll);
+
+  if (!showIntroduce) {
+    return null;
+  }
 
   return (
     <div id={styles.lines}>
