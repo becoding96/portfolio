@@ -2,12 +2,18 @@
 @import "@/styles/variables.scss";
 
 #component {
+  position: relative;
+  z-index: 2;
   min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, rgb(3, 3, 7) 0%, rgb(8, 8, 15) 100%);
+
+  @include mobile {
+    min-height: 40vh;
+  }
 }
 
 .btn-div {
