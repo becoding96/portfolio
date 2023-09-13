@@ -12,7 +12,13 @@
 }
 
 html {
-  background-color: $primary;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 4, 8, 1) 6%,
+    rgba(11, 11, 18, 1) 14%,
+    rgba(37, 41, 52, 1) 52%,
+    rgba(37, 41, 52, 1) 100%
+  );
 
   &::-webkit-scrollbar {
     width: 6px;
