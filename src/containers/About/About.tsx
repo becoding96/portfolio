@@ -49,16 +49,20 @@ function About({
             </h4>
             <p className={styles["margin-bottom"]}>
               <span>꾸준한 성장</span>을 중요시하며,{" "}
-              <span>기술 스택의 사용 근거</span>에 집중합니다.
+              <span>기술 스택의 특징</span>에 집중합니다.
             </p>
           </div>
           <div>
             <h3>Skills</h3>
-            <div id={styles["span-div"]} className={styles["margin-bottom"]}>
+            <div id={styles["span-div"]}>
               <span>React</span>
               <span>Next.js</span>
+              <span>Redux</span>
               <span>TypeScript</span>
               <span>SCSS</span>
+              <span>Python</span>
+            </div>
+            <div id={styles["span-div"]} className={styles["margin-bottom"]}>
               <span>Git</span>
               <span>Figma</span>
               <span>Jira</span>
