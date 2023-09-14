@@ -184,6 +184,8 @@
 
   .span-div {
     margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 
     span {
       background-color: rgba(39, 39, 39, 0.5);

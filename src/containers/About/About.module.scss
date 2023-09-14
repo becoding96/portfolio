@@ -106,12 +106,19 @@
 
 #span-div {
   margin-top: 0.5rem;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    max-width: 300px;
+  }
 
   span {
     background-color: rgba(120, 120, 120, 0.3);
     border-radius: 5px;
     text-align: center;
-    margin-right: 0.3rem;
+    margin: 0 0.3rem 0.3rem 0;
     padding: 0.2rem 0.5rem;
 
     &:hover {

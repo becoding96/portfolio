@@ -54,15 +54,13 @@ function About({
           </div>
           <div>
             <h3>Skills</h3>
-            <div id={styles["span-div"]}>
+            <div id={styles["span-div"]} className={styles["margin-bottom"]}>
               <span>React</span>
               <span>Next.js</span>
               <span>Redux</span>
               <span>TypeScript</span>
               <span>SCSS</span>
               <span>Python</span>
-            </div>
-            <div id={styles["span-div"]} className={styles["margin-bottom"]}>
               <span>Git</span>
               <span>Figma</span>
               <span>Jira</span>
