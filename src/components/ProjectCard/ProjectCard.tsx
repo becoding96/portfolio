@@ -1,32 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./ProjectCard.module.scss";
-import ProjectModal from "../Modal/ProjectModal";
+import RepomonModal from "../Modal/RepomonModal";
+import IUJModal from "../Modal/IUJModal";
+import FunteerModal from "../Modal/FunteerModal";
 
 interface ProjectCardPropsType {
   projectTitle: string;
   projectTitleEng: string;
   projectSummary: string;
-  projectFrom: string;
-  projectImageLength: number;
-  projectPeriod: string;
-  projectTechStack: string[];
-  projectDes: string[];
-  projectRole: string[];
-  projectAward?: string;
 }
 
 function ProjectCard({
   projectTitle,
   projectTitleEng,
   projectSummary,
-  projectFrom,
-  projectImageLength,
-  projectPeriod,
-  projectTechStack,
-  projectDes,
-  projectRole,
-  projectAward,
 }: ProjectCardPropsType) {
   return (
     <div className={styles.component}>
@@ -40,18 +28,9 @@ function ProjectCard({
       <div className={styles.projectInfo}>
         <h3>{projectTitle}</h3>
         <h4>{projectSummary}</h4>
-        <ProjectModal
-          projectTitle={projectTitle}
-          projectTitleEng={projectTitleEng}
-          projectImageLength={projectImageLength}
-          projectSummary={projectSummary}
-          projectFrom={projectFrom}
-          projectPeriod={projectPeriod}
-          projectTechStack={projectTechStack}
-          projectDes={projectDes}
-          projectRole={projectRole}
-          projectAward={projectAward}
-        />
+        {projectTitle === "레포몬" && <RepomonModal />}
+        {projectTitle === "아이유정" && <IUJModal />}
+        {projectTitle === "펀티어" && <FunteerModal />}
       </div>
     </div>
   );
