@@ -27,13 +27,13 @@ function Footer() {
     <div id={styles.component}>
       <div className={styles["btn-div"]}>
         <button onClick={handleClickGithubBtn}>
-          <BsGithub onClick={handleClickGithubBtn} />
+          <BsGithub />
         </button>
         <button onClick={handleClickVelogBtn}>
-          <SiVelog onClick={handleClickVelogBtn} />
+          <SiVelog />
         </button>
         <button onClick={handleClickEmailBtn}>
-          <AiOutlineMail onClick={handleClickEmailBtn} />
+          <AiOutlineMail />
         </button>
       </div>
       <div className={styles["p-div"]}>
