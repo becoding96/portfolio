@@ -183,7 +183,7 @@
   }
 
   .span-div {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     display: flex;
     flex-wrap: wrap;
 
@@ -191,9 +191,10 @@
       background-color: rgba(39, 39, 39, 0.5);
       border-radius: 5px;
       text-align: center;
-      padding: 0.2rem 0.5rem;
+      padding: 0rem 0.5rem;
       margin: 0.5rem 0.3rem 0 0;
       color: white;
+      font-size: 14px;
 
       &:hover {
         background-color: rgba(39, 39, 39, 0.4);
@@ -213,14 +214,14 @@
 }
 
 .contents {
-  color: rgb(40, 40, 40);
+  color: rgb(100, 100, 100);
 
   li {
     margin: 0 0 0.2rem 0.2rem;
   }
 
   span {
-    font-weight: 600;
+    color: rgb(0, 0, 0);
   }
 }
 
@@ -229,14 +230,14 @@
   margin: 2rem 0 1rem 0;
   color: black;
 
-  font-size: 19px;
+  font-size: 18px;
 
   @include desktop125 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @include tablet {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   @include mobile {

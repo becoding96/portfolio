@@ -158,8 +158,8 @@ function RepomonModal() {
                   </p>
                   <br />
                   <p>
-                    <span>크롬 익스텐션</span>은 <span>{"'레포몬 배틀'"}</span>
-                    이라는 일부 기능을{" "}
+                    <span>크롬 익스텐션</span>은 <span>{"'레포몬 배틀'"}</span>{" "}
+                    기능을{" "}
                     <span>
                       다른 작업을 하면서 함께 즐길 수 있도록 크롬 웹 스토어에
                     </span>
