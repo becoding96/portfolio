@@ -41,9 +41,9 @@
   background-color: rgba(0, 0, 0, 0.8);
 
   /* desktop */
-  width: 41%;
+  width: 32%;
   min-width: 550px;
-  max-height: 90%;
+  max-height: 80%;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -59,7 +59,7 @@
   }
 
   @include mobile {
-    min-width: 95%;
+    min-width: 80%;
   }
 }
 
@@ -201,7 +201,7 @@
       }
 
       @include mobile {
-        padding: 0.15rem 0.3rem;
+        padding: 0rem 0.3rem;
         font-size: 11px;
       }
     }
@@ -214,7 +214,7 @@
 }
 
 .contents {
-  color: rgb(100, 100, 100);
+  color: rgb(30, 30, 30);
 
   li {
     margin: 0 0 0.2rem 0.2rem;
@@ -222,6 +222,7 @@
 
   span {
     color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px rgb(180, 180, 180);
   }
 }
 
