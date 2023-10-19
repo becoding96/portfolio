@@ -1,46 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import styles from "./ProjectModal.module.scss";
+import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
 import { BsGithub } from "react-icons/bs";
+import useModal from "@/hooks/useModal";
+import onClickGithubIcon from "./onClickGithubIcon";
 
 function FunteerModal() {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
-  const [imageNum, setImageNum] = useState<number>(1);
-  const imageLength = 1;
 
-  const handleClickBtn = (direction: "left" | "right") => {
-    if (direction === "left") {
-      setImageNum((prev) => (prev === 1 ? imageLength : prev - 1));
-    } else if (direction === "right") {
-      setImageNum((prev) => (prev === imageLength ? 1 : prev + 1));
-    }
-  };
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-        setModalIsOpen(false);
-      }
-    };
-
-    if (modalIsOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [modalIsOpen]);
-
-  const onClickGithubIcon = () => {
-    const url = `https://github.com/becoding96/funteer`;
-
-    window.open(url, "_blank");
-  };
+  useModal(modalRef, modalIsOpen, setModalIsOpen);
 
   return (
     <>
@@ -64,27 +34,12 @@ function FunteerModal() {
                 priority={true}
                 loading="eager"
               />
-              <button
-                className={styles["left-btn"]}
-                onClick={() => handleClickBtn("left")}
-              >
-                {"<"}
-              </button>
-              <button
-                className={styles["right-btn"]}
-                onClick={() => handleClickBtn("right")}
-              >
-                {">"}
-              </button>
-              <span>
-                {imageNum} / {imageLength}
-              </span>
             </div>
             <div className={styles["text-div"]}>
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
                   <h3>펀티어</h3>
-                  <BsGithub onClick={onClickGithubIcon} />
+                  <BsGithub onClick={() => onClickGithubIcon("funteer")} />
                 </div>
                 <button
                   onClick={() => {

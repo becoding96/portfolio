@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import styles from "./ProjectModal.module.scss";
+import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
 import { BiAward } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
+import useModal from "@/hooks/useModal";
+import onClickGithubIcon from "./onClickGithubIcon";
 
 function RepomonModal() {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
@@ -11,36 +13,14 @@ function RepomonModal() {
   const [imageNum, setImageNum] = useState<number>(1);
   const imageLength = 10;
 
+  useModal(modalRef, modalIsOpen, setModalIsOpen);
+
   const handleClickBtn = (direction: "left" | "right") => {
     if (direction === "left") {
       setImageNum((prev) => (prev === 1 ? imageLength : prev - 1));
     } else if (direction === "right") {
       setImageNum((prev) => (prev === imageLength ? 1 : prev + 1));
     }
-  };
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-        setModalIsOpen(false);
-      }
-    };
-
-    if (modalIsOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [modalIsOpen]);
-
-  const onClickGithubIcon = () => {
-    const url = `https://github.com/becoding96/repomon`;
-
-    window.open(url, "_blank");
   };
 
   return (
@@ -89,7 +69,7 @@ function RepomonModal() {
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
                   <h3>레포몬</h3>
-                  <BsGithub onClick={onClickGithubIcon} />
+                  <BsGithub onClick={() => onClickGithubIcon("repomon")} />
                 </div>
                 <button
                   onClick={() => {
@@ -162,17 +142,13 @@ function RepomonModal() {
                     기능을{" "}
                     <span>
                       다른 작업을 하면서 함께 즐길 수 있도록 크롬 웹 스토어에
+                      등록했습니다.
                     </span>
-                  </p>
-                  <p>
-                    <span>등록</span>했습니다.
                   </p>
                   <br />
                   <p>
                     첫 화면에서 3D 모델이 들어가 <span>로딩 개선</span>이
-                    필요했고, <span>SEO</span>에 대한 중요성을 인지함에 따라
-                  </p>
-                  <p>
+                    필요했고, <span>SEO</span>에 대한 중요성을 인지함에 따라{" "}
                     <span>Next.js 프레임워크를 채택</span>했습니다.
                   </p>
                 </div>

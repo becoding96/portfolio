@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import styles from "./ProjectModal.module.scss";
+import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
 import { BsGithub } from "react-icons/bs";
+import useModal from "@/hooks/useModal";
+import onClickGithubIcon from "./onClickGithubIcon";
 
 function IUJModal() {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
@@ -10,36 +12,14 @@ function IUJModal() {
   const [imageNum, setImageNum] = useState<number>(1);
   const imageLength = 4;
 
+  useModal(modalRef, modalIsOpen, setModalIsOpen);
+
   const handleClickBtn = (direction: "left" | "right") => {
     if (direction === "left") {
       setImageNum((prev) => (prev === 1 ? imageLength : prev - 1));
     } else if (direction === "right") {
       setImageNum((prev) => (prev === imageLength ? 1 : prev + 1));
     }
-  };
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-        setModalIsOpen(false);
-      }
-    };
-
-    if (modalIsOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [modalIsOpen]);
-
-  const onClickGithubIcon = () => {
-    const url = `https://github.com/becoding96/iuj`;
-
-    window.open(url, "_blank");
   };
 
   return (
@@ -88,7 +68,7 @@ function IUJModal() {
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
                   <h3>아이유정</h3>
-                  <BsGithub onClick={onClickGithubIcon} />
+                  <BsGithub onClick={() => onClickGithubIcon("iuj")} />
                 </div>
                 <button
                   onClick={() => {
