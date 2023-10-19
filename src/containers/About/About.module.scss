@@ -55,7 +55,7 @@
 #profile-image {
   margin: auto auto;
   border-radius: 100%;
-  box-shadow: 0 0 0 5px $sub;
+  box-shadow: 0 0 0 4px $sub;
 
   @include desktop125 {
     width: 330px;
