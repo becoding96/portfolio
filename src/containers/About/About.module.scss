@@ -4,12 +4,13 @@
 #container {
   position: relative;
   z-index: 2;
+  padding: 5vh 0;
 
   background: linear-gradient(
     0deg,
     $primary 0%,
     rgb(31, 33, 42) 15%,
-    rgb(26, 28, 35) 50%,
+    rgb(27, 30, 35) 50%,
     rgb(31, 33, 42) 85%,
     $primary 100%
   );
