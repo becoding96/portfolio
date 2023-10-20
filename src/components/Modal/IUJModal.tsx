@@ -107,9 +107,9 @@ function IUJModal() {
                 </li>
                 <li>
                   <span>
-                    소셜 로그인, 메인 페이지, 지도 페이지, 관심 매물 페이지
+                    토큰 관리, 메인 페이지, 지도 페이지, 관심 매물 페이지
                   </span>
-                  을 제작했습니다.
+                  를 구현했습니다.
                 </li>
                 <p className={styles.subheading}>프로젝트 상세</p>
                 <details>

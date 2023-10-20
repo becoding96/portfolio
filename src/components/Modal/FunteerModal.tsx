@@ -88,7 +88,7 @@ function FunteerModal() {
                     회원가입, 관리자 페이지, 충전 및 환불, 단체 프로필,
                     고객센터, 서비스 소개
                   </span>
-                  를 제작했습니다.
+                  를 구현했습니다.
                 </li>
                 <p className={styles.subheading}>프로젝트 상세</p>
                 <details>
