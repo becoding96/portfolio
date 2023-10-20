@@ -161,7 +161,9 @@ function IUJModal() {
                 </details>
                 <details>
                   <summary>관심 매물 페이지</summary>
-                  <li>관심 매물로 등록한 부동산을 볼 수 있습니다.</li>
+                  <li>
+                    <span>관심 매물로 등록한 부동산</span>을 볼 수 있습니다.
+                  </li>
                 </details>
                 <p className={styles.subheading}>후기</p>
                 <li>
