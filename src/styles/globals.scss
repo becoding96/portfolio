@@ -21,18 +21,8 @@ html {
   );
 
   &::-webkit-scrollbar {
-    width: 3px;
+    width: 0px;
   }
-
-  &::-webkit-scrollbar-thumb {
-    background: gray;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: rgb(230, 230, 230);
-  }
-
-  scroll-behavior: smooth;
 }
 
 @include desktop {

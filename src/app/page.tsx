@@ -9,6 +9,7 @@ import About from "@/containers/About/About";
 import Projects from "@/containers/Projects/Projects";
 import Contact from "@/containers/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
+import ScrollBar from "@/components/ScrollBar/ScrollBar";
 
 export default function Home() {
   const Cursor = dynamic(() => import("@/components/Cursor/Cursor"), {
@@ -38,6 +39,7 @@ export default function Home() {
           contactRef.current?.scrollIntoView({ behavior: "smooth" })
         }
       />
+      <ScrollBar />
       <Main homeRef={homeRef} />
       <About aboutRef={aboutRef} />
       <Projects projectsRef={projectsRef} />
