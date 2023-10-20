@@ -38,7 +38,7 @@ function FunteerModal() {
             <div className={styles["text-div"]}>
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
-                  <h3>펀티어</h3>
+                  <h2>펀티어</h2>
                   <BsGithub onClick={() => onClickGithubIcon("funteer")} />
                 </div>
                 <button
@@ -85,10 +85,76 @@ function FunteerModal() {
                 </li>
                 <li>
                   <span>
-                    회원가입(개인, 단체), 관리자 페이지, 충전 및 환불(아임포트),
-                    프로필 페이지, 서비스 소개, 고객센터
+                    회원가입, 관리자 페이지, 충전 및 환불, 단체 프로필,
+                    고객센터, 서비스 소개
                   </span>
                   를 제작했습니다.
+                </li>
+                <p className={styles.subheading}>프로젝트 상세</p>
+                <details>
+                  <summary>회원가입</summary>
+                  <li>
+                    <span>개인과 단체에 대한 회원가입</span> 기능입니다.
+                  </li>
+                  <li>
+                    유효성 검사, 이메일 인증에 대한 타이머를 구현했습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>관리자 페이지</summary>
+                  <li>
+                    <span>
+                      개인 및 단체 회원 관리, 펀딩 관리, 기부 관리, 공지사항
+                      관리
+                    </span>{" "}
+                    등 관리자 기능을 종합해둔 페이지입니다.
+                  </li>
+                  <li>CRUD, 검색, 필터, 페이지네이션을 구현했습니다.</li>
+                </details>
+                <details>
+                  <summary>충전 및 환불</summary>
+                  <li>
+                    <span>아임포트를 이용한 충전 및 환불</span>을 구현했습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>단체 프로필</summary>
+                  <li>
+                    <span>단체 회원에 대한 프로필 페이지</span> 입니다.
+                  </li>
+                  <li>
+                    단체명, 연락처, 팔로워, 개설한 펀딩 등{" "}
+                    <span>단체에 대한 정보</span>를 볼 수 있습니다.
+                  </li>
+                  <li>
+                    <span>라이브 방송 중 후원받은 내역</span>을 볼 수 있습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>고객센터</summary>
+                  <li>
+                    <span>FAQ와 공지사항을 볼 수 있습니다.</span>
+                  </li>
+                </details>
+                <details>
+                  <summary>서비스 소개</summary>
+                  <li>
+                    <span>서비스에 대한 설명과 기대효과</span>를 표시한
+                    페이지입니다.
+                  </li>
+                </details>
+                <p className={styles.subheading}>후기</p>
+                <li>
+                  처음으로 제대로 된 프로젝트를 경험해보며 기획, 기능 정의,
+                  디자인, 개발, 발표 등의 전반적인 <span>프로젝트 과정</span>과,
+                  Git, Jira, Figma, Notion을 이용한 <span>협업</span>에
+                  익숙해졌습니다.
+                </li>
+                <li>
+                  UI/UX 측면에서 조금 더 잘하지 못해 아쉬운 점이 있었습니다.
+                  그러나 맡은 부분을 다 해결했고, React, TypeScript, SCSS 등
+                  새로운 기술 스택을 익히며{" "}
+                  <span>가장 큰 성장 폭을 보인 긍정적인 경험</span>이었습니다.
                 </li>
               </div>
             </div>

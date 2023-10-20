@@ -171,7 +171,7 @@
     color: gray;
   }
 
-  h3 {
+  h2 {
     color: rgb(10, 10, 10);
     font-weight: bold;
   }
@@ -216,6 +216,10 @@
 .contents {
   li {
     margin: 0 0 0.2rem 0.2rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   span {
@@ -228,14 +232,14 @@
   margin: 2rem 0 1rem 0;
   color: black;
 
-  font-size: 18px;
+  font-size: 19px;
 
   @include desktop125 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   @include tablet {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   @include mobile {
@@ -250,7 +254,4 @@
   & > svg {
     margin-right: 0.25rem;
   }
-}
-
-.detail {
 }

@@ -67,7 +67,7 @@ function IUJModal() {
             <div className={styles["text-div"]}>
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
-                  <h3>아이유정</h3>
+                  <h2>아이유정</h2>
                   <BsGithub onClick={() => onClickGithubIcon("iuj")} />
                 </div>
                 <button
@@ -111,45 +111,69 @@ function IUJModal() {
                   </span>
                   을 제작했습니다.
                 </li>
-                <p className={styles.subheading}>프로젝트 상세 설명</p>
-                <div className={styles.detail}>
-                  <p>
-                    지도의 매물은 <span>점수가 적혀있는 집 모양의 마커</span>로
-                    표현했습니다.
-                  </p>
-                  <br />
-                  <p>
-                    <span>원하는 주변 시설을 설정하고, 저장</span>할 수
-                    있습니다. 저장한 주변 시설은 언제든 불러와 적용할 수
+                <p className={styles.subheading}>프로젝트 상세</p>
+                <details>
+                  <summary>토큰 관리</summary>
+                  <li>
+                    <span>axios interceptor</span>를 이용하여{" "}
+                    <span>access, refresh 토큰을 관리</span>했습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>메인 페이지</summary>
+                  <li>
+                    <span>서비스 배너와 부동산 관련 기사</span>가 포함되어
                     있습니다.
-                  </p>
-                  <p>
-                    <span>주변 시설을 설정</span>하면 매물의 추천{" "}
-                    <span>점수에 해당 시설들이 반영</span>됩니다.
-                  </p>
-                  <br />
-                  <p>
-                    좌측 탭의 매물 목록에 점수에 대한 근거를 볼 수 있습니다.
-                  </p>
-                  <p>
-                    예를 들어, 주변 시설로 초등학교, 지하철, 병원, 치안,
-                    도서관을 선택했다면 각각에 대한 점수를 볼 수 있습니다.
-                  </p>
-                  <br />
-                  <p>
+                  </li>
+                  <li>
+                    <span>UI 만족도를 높이기 위해</span> 글자 단위로
+                    애니메이션을 적용했습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>지도 페이지</summary>
+                  <li>
+                    <span>
+                      지도의 매물은 점수가 적혀있는 집 모양의 마커로 표현
+                    </span>
+                    했습니다. 점수가 높을 수록 마커의 채도를 증가시켰습니다.
+                  </li>
+                  <li>
+                    <span>원하는 주변 시설을 설정하고, 저장</span>할 수
+                    있습니다.
+                  </li>
+                  <li>
+                    저장한 주변 시설은 언제든 불러와 다시 적용할 수 있습니다.
+                  </li>
+                  <li>
+                    <span>주변 시설을 설정</span>하면{" "}
+                    <span>매물의 추천 점수에 반영</span>됩니다.
+                  </li>
+                  <li>
+                    좌측 탭의 매물 목록에서{" "}
+                    <span>?를 클릭하면 점수에 대한 근거</span>를 그래프로 볼 수
+                    있습니다. (ex. 병원 70, 지하철 60...)
+                  </li>
+                  <li>
                     <span>필터 기능</span>이 포함되어 있습니다. 부동산 매물
                     종류, 평수, 층수, 거래 종류를 선택할 수 있습니다.
-                  </p>
-                  <br />
-                  <p>
-                    또한, 프로젝트의 진행도에 따라 사이트가 무거워지는 것에
-                    불편함을 느껴,
-                  </p>
-                  <p>
-                    <span>빠른 빌드 도구인 Vite를 사용</span>해 개발 생산성을
-                    향상시켰습니다.
-                  </p>
-                </div>
+                  </li>
+                </details>
+                <details>
+                  <summary>관심 매물 페이지</summary>
+                  <li>관심 매물로 등록한 부동산을 볼 수 있습니다.</li>
+                </details>
+                <p className={styles.subheading}>후기</p>
+                <li>
+                  컴포넌트 구현력을 높이기 위해 그래프, 애니메이션 등{" "}
+                  <span>모든 컴포넌트를 CSS만을 이용해 직접 제작</span>해보며
+                  CSS에 대한 이해도가 증가했습니다.
+                </li>
+                <li>
+                  프로젝트의 진행도에 따라 사이트가 무거워지는 것에 불편함을
+                  느껴, <span>빠른 빌드 도구인 Vite를 사용</span>해 개발
+                  생산성을 향상시켰습니다.
+                </li>
               </div>
             </div>
           </div>,

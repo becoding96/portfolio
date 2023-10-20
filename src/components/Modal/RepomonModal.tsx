@@ -68,7 +68,7 @@ function RepomonModal() {
             <div className={styles["text-div"]}>
               <div className={styles["first-line"]}>
                 <div className={styles["title-div"]}>
-                  <h3>레포몬</h3>
+                  <h2>레포몬</h2>
                   <BsGithub onClick={() => onClickGithubIcon("repomon")} />
                 </div>
                 <button
@@ -120,38 +120,112 @@ function RepomonModal() {
                 </li>
                 <li>
                   <span>
-                    소셜 로그인, 메인 페이지, 레포지토리 분석 페이지,
-                    랭킹페이지, 크롬 익스텐션
+                    토큰 관리, 메인 페이지, 레포지토리 분석 페이지, 랭킹페이지,
+                    크롬 익스텐션
                   </span>
-                  을 제작했습니다.
+                  을 구현했습니다.
                 </li>
-                <p className={styles.subheading}>프로젝트 상세 설명</p>
-                <div className={styles.detail}>
-                  <p>
-                    <span>레포지토리 분석 페이지</span>는{" "}
+                <p className={styles.subheading}>프로젝트 상세</p>
+                <details>
+                  <summary>토큰 관리</summary>
+                  <li>
+                    <span>axios interceptor</span>를 이용하여{" "}
+                    <span>access, refresh 토큰을 관리</span>했습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>메인 페이지</summary>
+                  <li>
+                    <span>주요 서비스 소개</span>가 포함되어 있습니다.
+                  </li>
+                  <li>
+                    3D 모델인 {`'레포몬'`}이 첫 페이지에서 렌더링됩니다.
+                    <span> Next.js를 채택한 이유</span> 중 하나입니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>레포지토리 분석 페이지</summary>
+                  <li>
+                    <span>레포몬과 레포지토리(프로젝트)에 대한 정보</span>를 볼
+                    수 있는 페이지입니다.
+                  </li>
+                  <li>
+                    <span>프로젝트 갱신</span>: 서버에 레포지토리 갱신을
+                    요청하고, 갱신한 데이터를 재요청합니다.
+                  </li>
+                  <li>
+                    <span>프로젝트 정보 설정</span>: 레포몬 이름, 프로젝트 기간,
+                    대표 레포지토리 설정 작업을 할 수 있습니다.
+                  </li>
+                  <li>
+                    <span>카드 추출</span>: Github README에 활용 가능한 카드를
+                    추출할 수 있습니다. 카드는 레포지토리와 레포몬에 관한 정보를
+                    담습니다. 카드에 기입할 정보를 커스텀할 수 있습니다.
+                  </li>
+                  <li>
+                    <span>성장 탭</span>: 레포몬이 성장한 근거와 얼마나
+                    성장했는지를 나타냅니다. (chart.js)
+                  </li>
+                  <li>
+                    <span>컨벤션 탭</span>: 프로젝트 컨벤션을 등록 및 수정할 수
+                    있습니다. 컨벤션 준수율을 확인할 수 있습니다. (chart.js)
+                  </li>
+                  <li>
+                    <span>기여도 탭</span>: 본인의 프로젝트에 대한 기여도를 커밋
+                    수 기준으로 나타냅니다. (chart.js)
+                  </li>
+                  <li>
+                    <span>배틀 탭</span>: 다른 레포몬과 배틀을 매칭하고.
+                    레포몬의 배틀에 관한 정보(능력치, 전적, 티어 등)를 볼 수
+                    있습니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>랭킹 페이지</summary>
+                  <li>
+                    <span>레포몬, 유저, 배틀 랭킹</span> 을 볼 수 있는
+                    페이지입니다.
+                  </li>
+                </details>
+                <details>
+                  <summary>크롬 익스텐션</summary>
+                  <li>
                     <span>
-                      프로젝트 갱신, 프로젝트의 성장 곡선, 컨벤션 준수율, 개인의
-                      프로젝트 기여도, 레포몬 배틀에 관한 정보(레이팅, 능력치,
-                      전적, 순위 ...)
+                      레포몬 배틀 기능을 다른 작업을 하면서 함께 즐길 수 있도록
                     </span>{" "}
-                    등의 기능이 포함되어 있습니다.
-                  </p>
-                  <br />
-                  <p>
-                    <span>크롬 익스텐션</span>은 <span>{"'레포몬 배틀'"}</span>{" "}
-                    기능을{" "}
-                    <span>
-                      다른 작업을 하면서 함께 즐길 수 있도록 크롬 웹 스토어에
-                      등록했습니다.
-                    </span>
-                  </p>
-                  <br />
-                  <p>
-                    첫 화면에서 3D 모델이 들어가 <span>로딩 개선</span>이
-                    필요했고, <span>SEO</span>에 대한 중요성을 인지함에 따라{" "}
-                    <span>Next.js 프레임워크를 채택</span>했습니다.
-                  </p>
-                </div>
+                    크롬 익스텐션으로 제작하여{" "}
+                    <a
+                      href="https://chrome.google.com/webstore/detail/repomon-battle-device/pedmecadllmofbjpcoepkanglfhokjpi?hl=ko"
+                      target="_blank"
+                    >
+                      크롬 웹 스토어
+                    </a>
+                    에 등록했습니다.
+                  </li>
+                  <li>
+                    익스텐션 내부의 로그인은{" "}
+                    <span>레포몬 사이트에서 인증 키를 발급</span>받는 방식으로
+                    처리했습니다.
+                  </li>
+                </details>
+
+                <p className={styles.subheading}>후기</p>
+                <li>
+                  Next 최신 버전을 이용한 SSR 방식을 처음 도입하다보니
+                  프로젝트가 진행됨에 따라{" "}
+                  <span>서버 컴포넌트와 클라이언트 컴포넌트</span>를 제대로
+                  나누지 못했습니다. 다음 프로젝트에서는 이에 대한{" "}
+                  <span>기초 설계</span>가 선행되어야 함을 느꼈습니다.
+                </li>
+                <li>
+                  Chart.js, Three.js, React-Modal과 같은 여러 라이브러리를
+                  사용하면서{" "}
+                  <span>
+                    라이브러리의 Docs를 참고하며 원하는 정보를 찾아 커스텀하는
+                    것에 익숙
+                  </span>
+                  해졌습니다.
+                </li>
               </div>
             </div>
           </div>,
