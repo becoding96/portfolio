@@ -5,7 +5,7 @@ $spin-time: 5.5s;
 $circle-size: 55vmin;
 $circle-stroke: 2vmin;
 $displacement: 0%;
-$opacity: 1;
+$opacity: 0.9;
 
 .circles {
   z-index: 0;
@@ -13,7 +13,7 @@ $opacity: 1;
   width: $circle-size;
   position: fixed;
   margin: 0 auto;
-  top: 51.5%;
+  top: 52%;
   left: 50%;
   transform: translate3D(-50%, -50%, 0);
   animation: fade-in 3s ease;
@@ -22,6 +22,7 @@ $opacity: 1;
     height: 74vmin;
     width: 74vmin;
     opacity: 0.25;
+    animation: mobile-fade-in 3s ease;
   }
 }
 
@@ -38,24 +39,28 @@ $opacity: 1;
     border-color: rgb(219, 68, 55, $opacity);
     transform-origin: 50%-$displacement 50%;
     animation: spin1 $spin-time linear infinite;
+    box-shadow: 0 0 7px rgb(219, 68, 55, $opacity);
   }
 
   &:nth-child(2) {
     border-color: rgb(244, 180, 0, $opacity);
     transform-origin: 50% 50% + $displacement;
     animation: spin2 $spin-time linear infinite;
+    box-shadow: 0 0 7px rgb(244, 180, 0, $opacity);
   }
 
   &:nth-child(3) {
     border-color: rgb(66, 133, 244, $opacity);
     transform-origin: 50% + $displacement 50%;
     animation: spin3 $spin-time linear infinite;
+    box-shadow: 0 0 7px rgb(66, 133, 244, $opacity);
   }
 
   &:nth-child(4) {
     border-color: rgb(15, 157, 88, $opacity);
     transform-origin: 50% 50%-$displacement;
     animation: spin4 $spin-time linear infinite;
+    box-shadow: 0 0 7px rgb(15, 157, 88, $opacity);
   }
 }
 
@@ -103,6 +108,18 @@ $opacity: 1;
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: $opacity;
+  }
+}
+
+@keyframes mobile-fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.25;
   }
 }
