@@ -12,11 +12,16 @@ function Circle() {
       return;
     }
 
-    if (window.scrollY > window.innerHeight / 3) {
-      circleRef.current.style.opacity = "0";
+    const scrollY = window.scrollY;
+    const size = Math.min(50 + (scrollY / (window.innerHeight / 3)) * 30, 80);
+    const opacity = 1 - scrollY / (window.innerHeight / 3);
+
+    if (window.innerWidth <= 700) {
+      circleRef.current.style.opacity = `${Math.min(0.25, opacity)}`;
     } else {
-      circleRef.current.style.opacity =
-        window.innerWidth <= 700 ? "0.25" : "0.9";
+      circleRef.current.style.width = `${size}vmin`;
+      circleRef.current.style.height = `${size}vmin`;
+      circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
     }
   };
 

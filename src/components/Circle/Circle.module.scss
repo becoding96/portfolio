@@ -16,12 +16,15 @@ $opacity: 0.9;
   top: 52%;
   left: 50%;
   transform: translate3D(-50%, -50%, 0);
-  transition: opacity 1s ease;
+  transition:
+    height 0.1s ease,
+    width 0.1s ease,
+    opacity 1s ease;
   animation: fade-in 3s ease;
 
   @include mobile {
-    height: 74vmin;
-    width: 74vmin;
+    height: 80vmin;
+    width: 80vmin;
     opacity: 0.25;
     animation: mobile-fade-in 3s ease;
   }
