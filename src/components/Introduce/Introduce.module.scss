@@ -17,7 +17,7 @@
   top: calc(50vh - $navbar-height * 1.5);
   left: calc(50% - 150px);
   text-align: center;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
 
   @include mobile {
     width: 250px;
