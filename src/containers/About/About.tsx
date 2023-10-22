@@ -11,11 +11,26 @@ function About({
 }: {
   aboutRef: React.MutableRefObject<HTMLDivElement | null>;
 }) {
-  const [showContents, setShowContents] = useState<boolean>(false);
+  const [showImage, setShowImage] = useState(false);
+  const [showIAmDiv, setShowIAmDiv] = useState(false);
+  const [showSkillsDiv, setShowSkillsDiv] = useState(false);
+  const [showCareerDiv, setShowCareerDiv] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY >= window.innerHeight) {
-      setShowContents(true);
+      setShowImage(true);
+
+      setTimeout(() => {
+        setShowIAmDiv(true);
+      }, 150);
+
+      setTimeout(() => {
+        setShowSkillsDiv(true);
+      }, 300);
+
+      setTimeout(() => {
+        setShowCareerDiv(true);
+      }, 450);
     }
   };
 
@@ -28,21 +43,22 @@ function About({
         multiplier={0.75}
         direction="slide-in-left"
       />
-      <div
-        id={styles.contents}
-        className={showContents ? styles.visible : styles.hidden}
-      >
+      <div id={styles.contents}>
         <Image
           id={styles["profile-image"]}
+          className={showImage ? styles["slide-in-left"] : styles.hidden}
           src="/profile.webp"
           quality={100}
-          width={400}
-          height={400}
+          width={380}
+          height={380}
           alt="프로필 이미지"
         />
         <div id={styles["profile-text"]}>
-          <div id={styles["i-am"]}>
-            <h3 className={styles.category}>I am</h3>
+          <div
+            id={styles["i-am"]}
+            className={showIAmDiv ? styles["slide-in-right"] : styles.hidden}
+          >
+            <h3>I am</h3>
             <h4>
               안녕하세요. <span>프론트엔드 개발자 백준봉</span>
               입니다.
@@ -52,7 +68,9 @@ function About({
               <span>기술 스택의 특징</span>에 집중합니다.
             </p>
           </div>
-          <div>
+          <div
+            className={showSkillsDiv ? styles["slide-in-right"] : styles.hidden}
+          >
             <h3>Skills</h3>
             <div id={styles["span-div"]} className={styles["margin-bottom"]}>
               <span>React</span>
@@ -66,7 +84,9 @@ function About({
               <span>Jira</span>
             </div>
           </div>
-          <div>
+          <div
+            className={showCareerDiv ? styles["slide-in-right"] : styles.hidden}
+          >
             <h3>Career</h3>
             <li>2022.07 ~ 2023.06 &nbsp; 삼성 청년 SW 아카데미 8기</li>
             <li>2015.03 ~ 2022.02 &nbsp; 부경대학교 통계학과</li>

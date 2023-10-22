@@ -26,13 +26,13 @@
   width: 70%;
   height: 70%;
   margin: 0 auto;
-  padding-top: calc($navbar-height * 4);
+  padding-top: calc($navbar-height * 5.5);
   transition: opacity 0.5s;
 
   @include tablet {
     display: flex;
     flex-direction: column;
-    padding-top: calc($navbar-height * 4);
+    padding-top: calc($navbar-height * 5);
   }
 
   @include mobile {
@@ -43,14 +43,48 @@
   }
 }
 
-.visible {
+.slide-in-left {
   visibility: visible;
-  opacity: 1;
+  animation: silde-in-left 0.75s ease-out;
+
+  @keyframes silde-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+
+      @include mobile {
+        transform: translateX(-10px);
+      }
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.slide-in-right {
+  visibility: visible;
+  animation: silde-in-right 0.5s ease-out;
+
+  @keyframes silde-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+
+      @include mobile {
+        transform: translateX(10px);
+      }
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 .hidden {
   visibility: hidden;
-  opacity: 0;
 }
 
 #profile-image {
