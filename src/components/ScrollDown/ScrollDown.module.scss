@@ -1,3 +1,6 @@
+@import "@/styles/variables.scss";
+@import "@/styles/responsive.scss";
+
 .box span {
   z-index: 2;
   position: absolute;
@@ -8,6 +11,13 @@
   border-bottom: 2px solid #fff;
   transform: rotate(45deg);
   animation: animate 2s infinite;
+
+  @include mobile {
+    border-right: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    height: 10px;
+    width: 10px;
+  }
 }
 
 @keyframes animate {
