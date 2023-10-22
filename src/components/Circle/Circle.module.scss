@@ -19,8 +19,9 @@ $opacity: 1;
   animation: fade-in 3s ease;
 
   @include mobile {
-    height: 72vmin;
-    width: 72vmin;
+    height: 74vmin;
+    width: 74vmin;
+    opacity: 0.25;
   }
 }
 
