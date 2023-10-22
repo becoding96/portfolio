@@ -126,8 +126,8 @@ function IUJModal() {
                     있습니다.
                   </li>
                   <li>
-                    <span>UI 만족도를 높이기 위해</span> 글자 단위로
-                    애니메이션을 적용했습니다.
+                    UI 만족도를 높이기 위해{" "}
+                    <span>글자 단위로 애니메이션을 적용</span>했습니다.
                   </li>
                 </details>
                 <details>
