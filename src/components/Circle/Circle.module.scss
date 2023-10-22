@@ -13,13 +13,10 @@ $opacity: 0.9;
   width: $circle-size;
   position: fixed;
   margin: 0 auto;
-  top: 52%;
+  top: 50%;
   left: 50%;
   transform: translate3D(-50%, -50%, 0);
-  transition:
-    height 0.1s ease,
-    width 0.1s ease,
-    opacity 1s ease;
+  transition: all 0.1s ease;
   animation: fade-in 3s ease;
 
   @include mobile {

@@ -65,16 +65,6 @@ function Introduce() {
           <span>백준봉</span>입니다.
         </h1>
       )}
-      {lineLength >= 5 && (
-        <button
-          id={styles["scroll-btn"]}
-          onClick={() => {
-            scrollTo({ top: window.innerHeight, behavior: "smooth" });
-          }}
-        >
-          <span>View my work</span> <FiArrowDown id={styles.arrow} />
-        </button>
-      )}
     </div>
   );
 }
