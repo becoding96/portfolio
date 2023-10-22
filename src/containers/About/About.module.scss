@@ -45,16 +45,12 @@
 
 .slide-in-left {
   visibility: visible;
-  animation: silde-in-left 0.75s ease-out;
+  animation: slide-in-left 0.75s ease-out;
 
-  @keyframes silde-in-left {
+  @keyframes slide-in-left {
     0% {
       opacity: 0;
-      transform: translateX(-100px);
-
-      @include mobile {
-        transform: translateX(-10px);
-      }
+      transform: translateX(-50px);
     }
     100% {
       opacity: 1;
@@ -65,16 +61,12 @@
 
 .slide-in-right {
   visibility: visible;
-  animation: silde-in-right 0.5s ease-out;
+  animation: slide-in-right 0.5s ease-out;
 
-  @keyframes silde-in-right {
+  @keyframes slide-in-right {
     0% {
       opacity: 0;
-      transform: translateX(100px);
-
-      @include mobile {
-        transform: translateX(10px);
-      }
+      transform: translateX(50px);
     }
     100% {
       opacity: 1;
