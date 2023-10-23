@@ -8,8 +8,18 @@ function ScrollBar() {
   const [scrollTop, setScrollTop] = useState((0 / pageHeight) * 100);
 
   useEffect(() => {
-    setPageHeight(document.documentElement.scrollHeight);
-    setWindowHeight(window.innerHeight);
+    const handleResize = () => {
+      setPageHeight(document.documentElement.scrollHeight);
+      setWindowHeight(window.innerHeight);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
