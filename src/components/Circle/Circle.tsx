@@ -21,7 +21,7 @@ function Circle() {
         size = Math.min(80 + (scrollY / (window.innerHeight / 3)) * 20, 100);
         circleRef.current.style.opacity = `${Math.min(0.25, opacity)}`;
       } else {
-        size = Math.min(50 + (scrollY / (window.innerHeight / 3)) * 30, 80);
+        size = Math.min(50 + (scrollY / (window.innerHeight / 3)) * 130, 180);
         circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
       }
 
