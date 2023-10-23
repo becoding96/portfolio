@@ -49,8 +49,8 @@ function About({
           className={showImage ? styles["slide-in-left"] : styles.hidden}
           src="/profile.webp"
           quality={100}
-          width={380}
-          height={380}
+          width={370}
+          height={370}
           alt="프로필 이미지"
         />
         <div id={styles["profile-text"]}>

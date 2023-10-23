@@ -14,14 +14,14 @@
   display: flex;
   width: 70%;
   margin: 0 auto;
-  padding-top: calc($navbar-height * 3.5);
+  padding-top: calc($navbar-height * 4);
   transition: opacity 1.5s;
 
   @include tablet {
-    width: 100%;
+    width: 95%;
   }
 
-  @include mobile {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
   }
 }

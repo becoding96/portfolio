@@ -26,7 +26,7 @@
   width: 70%;
   height: 70%;
   margin: 0 auto;
-  padding-top: calc($navbar-height * 5.5);
+  padding-top: calc($navbar-height * 5.2);
   transition: opacity 0.5s;
 
   @include tablet {
@@ -106,15 +106,18 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto 0 auto;
+  padding-left: 2rem;
   color: white;
   line-height: 1.5rem;
 
   @include tablet {
     margin: 4rem auto 0 auto;
+    padding-left: 1rem;
   }
 
   @include mobile {
     margin: 2rem auto 0 auto;
+    padding-left: 0.5rem;
   }
 
   h3 {
