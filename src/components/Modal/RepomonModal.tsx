@@ -183,7 +183,7 @@ function RepomonModal() {
                 <details>
                   <summary>랭킹 페이지</summary>
                   <li>
-                    <span>레포몬, 유저, 배틀 랭킹</span> 을 볼 수 있는
+                    <span>레포몬, 유저, 배틀 랭킹</span>을 볼 수 있는
                     페이지입니다.
                   </li>
                 </details>
