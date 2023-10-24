@@ -133,7 +133,7 @@ function FunteerModal() {
                 <details>
                   <summary>고객센터</summary>
                   <li>
-                    <span>FAQ와 공지사항을 볼 수 있습니다.</span>
+                    <span>FAQ와 공지사항</span>을 볼 수 있습니다.
                   </li>
                 </details>
                 <details>

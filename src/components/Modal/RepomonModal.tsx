@@ -139,7 +139,8 @@ function RepomonModal() {
                     <span>주요 서비스 소개</span>가 포함되어 있습니다.
                   </li>
                   <li>
-                    3D 모델인 {`'레포몬'`}이 첫 페이지에서 렌더링됩니다.
+                    <span>3D 모델인 {`'레포몬'`}이 첫 페이지에서 렌더링</span>
+                    됩니다.
                     <span> Next.js를 채택한 이유</span> 중 하나입니다.
                   </li>
                 </details>
