@@ -47,6 +47,10 @@
   visibility: visible;
   animation: slide-in-left 0.75s ease-out;
 
+  @include mobile {
+    animation: fade-in 0.5s ease-out;
+  }
+
   @keyframes slide-in-left {
     0% {
       opacity: 0;
@@ -62,6 +66,10 @@
 .slide-in-right {
   visibility: visible;
   animation: slide-in-right 0.5s ease-out;
+
+  @include mobile {
+    animation: fade-in 0.5s ease-out;
+  }
 
   @keyframes slide-in-right {
     0% {
@@ -171,4 +179,13 @@
 
 .bold {
   font-weight: bold;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
