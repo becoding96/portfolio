@@ -14,17 +14,13 @@ function Circle() {
       }
 
       const scrollY = window.scrollY;
-      let size;
+      const size = Math.min(
+        50 + (scrollY / (window.innerHeight / 3)) * 60,
+        110
+      );
       const opacity = 1 - scrollY / (window.innerHeight / 3);
 
-      if (window.innerWidth <= 700) {
-        size = Math.min(80 + (scrollY / (window.innerHeight / 3)) * 20, 100);
-        circleRef.current.style.opacity = `${Math.min(0.25, opacity)}`;
-      } else {
-        size = Math.min(50 + (scrollY / (window.innerHeight / 3)) * 60, 110);
-        circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
-      }
-
+      circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
       circleRef.current.style.width = `${size}vmin`;
       circleRef.current.style.height = `${size}vmin`;
     });
