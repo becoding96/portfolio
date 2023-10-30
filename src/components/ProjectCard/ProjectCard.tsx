@@ -4,6 +4,7 @@ import styles from "./ProjectCard.module.scss";
 import RepomonModal from "../Modal/RepomonModal";
 import IUJModal from "../Modal/IUJModal";
 import FunteerModal from "../Modal/FunteerModal";
+import YumCandyModal from "../Modal/YumCandyModal";
 
 interface ProjectCardPropsType {
   projectTitle: string;
@@ -31,6 +32,7 @@ function ProjectCard({
         {projectTitle === "레포몬" && <RepomonModal />}
         {projectTitle === "아이유정" && <IUJModal />}
         {projectTitle === "펀티어" && <FunteerModal />}
+        {projectTitle === "냠캔디" && <YumCandyModal />}
       </div>
     </div>
   );

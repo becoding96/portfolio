@@ -49,6 +49,11 @@ function Projects({
           projectTitleEng="Funteer"
           projectSummary="봉사 크라우드 펀딩 서비스"
         />
+        <ProjectCard
+          projectTitle="냠캔디"
+          projectTitleEng="YumCandy"
+          projectSummary="사탕 먹고 피하기 게임"
+        />
       </div>
     </div>
   );
