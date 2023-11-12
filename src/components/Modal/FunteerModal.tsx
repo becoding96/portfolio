@@ -49,7 +49,7 @@ function FunteerModal() {
                   X
                 </button>
               </div>
-              <p className={styles.date}>2023.02.20 ~ 2023.04.07</p>
+              <p className={styles.date}>2023.01.03 ~ 2023.02.17</p>
               <h4 style={{ color: "rgb(20, 20, 20)" }}>
                 삼성 청년 SW 아카데미 공통 프로젝트 (6인)
               </h4>
