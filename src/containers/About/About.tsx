@@ -58,7 +58,7 @@ function About({
             id={styles["i-am"]}
             className={showIAmDiv ? styles["slide-in-right"] : styles.hidden}
           >
-            <h3>I am</h3>
+            <p className={styles.subheading}>I am</p>
             <h4>
               안녕하세요. <span>프론트엔드 개발자 백준봉</span>
               입니다.
@@ -71,7 +71,7 @@ function About({
           <div
             className={showSkillsDiv ? styles["slide-in-right"] : styles.hidden}
           >
-            <h3>Skills</h3>
+            <p className={styles.subheading}>Skills</p>
             <div id={styles["span-div"]} className={styles["margin-bottom"]}>
               <span>React</span>
               <span>Next.js</span>
@@ -87,7 +87,7 @@ function About({
           <div
             className={showCareerDiv ? styles["slide-in-right"] : styles.hidden}
           >
-            <h3>Career</h3>
+            <p className={styles.subheading}>Career</p>
             <li>2022.07 ~ 2023.06 &nbsp; 삼성 청년 SW 아카데미 8기</li>
             <li>2015.03 ~ 2022.02 &nbsp; 부경대학교 통계학과</li>
           </div>
