@@ -14,13 +14,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   padding-top: calc($navbar-height * 4);
   transition: opacity 1.5s;
 
   @include tablet {
-    width: 95%;
+    width: 90%;
   }
 
   @media screen and (max-width: 900px) {
