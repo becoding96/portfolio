@@ -16,7 +16,7 @@ function Contact({
 }) {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [showForm, setShowForm] = useState<boolean>(false);
-  const multiplier: number = 2.4;
+  const multiplier: number = 2.5;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const handleScroll = () => {

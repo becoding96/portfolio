@@ -209,15 +209,7 @@ function RepomonModal() {
                     처리했습니다.
                   </li>
                 </details>
-
                 <p className={styles.subheading}>후기</p>
-                <li>
-                  Next 최신 버전을 이용한 SSR 방식을 처음 도입하다보니
-                  프로젝트가 진행됨에 따라{" "}
-                  <span>서버 컴포넌트와 클라이언트 컴포넌트</span>를 제대로
-                  나누지 못했습니다. 다음 프로젝트에서는 이에 대한{" "}
-                  <span>기초 설계</span>가 선행되어야 함을 느꼈습니다.
-                </li>
                 <li>
                   Chart.js, Three.js, React-Modal과 같은 여러 라이브러리를
                   사용하면서{" "}
@@ -226,6 +218,13 @@ function RepomonModal() {
                     것에 익숙
                   </span>
                   해졌습니다.
+                </li>
+                <li>
+                  Next 최신 버전을 이용한 SSR 방식을 처음 도입하다보니
+                  프로젝트가 진행됨에 따라{" "}
+                  <span>서버 컴포넌트와 클라이언트 컴포넌트</span>를 제대로
+                  나누지 못했습니다. 다음 프로젝트에서는 이에 대한{" "}
+                  <span>기초 설계</span>가 선행되어야 함을 느꼈습니다.
                 </li>
               </div>
             </div>

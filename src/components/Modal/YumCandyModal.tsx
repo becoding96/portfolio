@@ -78,7 +78,7 @@ function YumCandyModal() {
                   입니다.
                 </li>
                 <li>
-                  <span>three.js를 연습</span>하기 위해 만든 게임입니다.
+                  <span>three.js 연습용</span>으로 만든 게임입니다.
                 </li>
               </div>
             </div>

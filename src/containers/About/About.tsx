@@ -44,15 +44,21 @@ function About({
         direction="slide-in-left"
       />
       <div id={styles.contents}>
-        <Image
-          id={styles["profile-image"]}
+        <div
+          id={styles["profile-div"]}
           className={showImage ? styles["slide-in-left"] : styles.hidden}
-          src="/profile.webp"
-          quality={100}
-          width={350}
-          height={350}
-          alt="프로필 이미지"
-        />
+        >
+          <Image
+            id={styles["profile-image"]}
+            className={showImage ? styles["slide-in-left"] : styles.hidden}
+            src="/profile2.webp"
+            width={160}
+            height={200}
+            quality={100}
+            alt="프로필 이미지"
+          />
+          <div className={styles["profile-shadow"]} />
+        </div>
         <div id={styles["profile-text"]}>
           <div
             id={styles["i-am"]}

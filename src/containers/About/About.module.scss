@@ -87,26 +87,38 @@
   visibility: hidden;
 }
 
-#profile-image {
+#profile-div {
+  position: relative;
   margin: auto auto;
-  border-radius: 100%;
-  box-shadow: 0 0 0 4px $sub;
+  left: 20px;
+  width: 160px;
+  height: 200px;
+
+  .profile-shadow {
+    z-index: -1;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 160px;
+    height: 200px;
+    background-color: $sub;
+  }
 
   @include desktop125 {
-    width: 320px;
-    height: 320px;
+    left: 0;
   }
 
   @include tablet {
-    width: 320px;
-    height: 320px;
+    left: 0;
   }
 
   @include mobile {
-    width: 250px;
-    height: 250px;
-    margin: 3rem auto;
+    margin: 5rem auto 2rem auto;
   }
+}
+
+#profile-image {
+  margin: auto auto;
 }
 
 #profile-text {
