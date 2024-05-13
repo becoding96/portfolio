@@ -18,7 +18,7 @@ function Circle() {
         50 + (scrollY / (window.innerHeight / 3)) * 60,
         110
       );
-      const opacity = 1 - scrollY / (window.innerHeight / 3);
+      const opacity = 1 - scrollY / (window.innerHeight / 4);
 
       circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
       circleRef.current.style.width = `${size}vmin`;
