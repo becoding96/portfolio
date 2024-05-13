@@ -13,9 +13,9 @@
 #lines {
   position: fixed;
   width: 300px;
-  height: 120px;
+  height: 300px;
   top: calc(50vh - $navbar-height * 1.5);
-  left: calc(50% - 150px);
+  // left: calc(50% - 150px);
   text-align: center;
   transition: opacity 1s ease;
 
@@ -30,11 +30,11 @@
     animation: fade-in 0.5s ease;
 
     span {
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: bold;
 
       @include mobile {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
     }
   }

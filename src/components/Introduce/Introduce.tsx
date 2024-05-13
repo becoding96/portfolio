@@ -50,7 +50,7 @@ function Introduce() {
         <h1>
           <span className={styles.highlight}>
             <ReactTypingEffect
-              text={["프론트엔드", "성장하는", "유저 친화적인", "빨리 배우는"]}
+              text={["프론트엔드", "ERP", "빨리 배우는", "유저 친화적인"]}
               speed={200}
               eraseSpeed={100}
               eraseDelay={1500}
