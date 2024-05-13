@@ -20,9 +20,14 @@ function Circle() {
       );
       const opacity = 1 - scrollY / (window.innerHeight / 4);
 
-      circleRef.current.style.opacity = `${Math.min(0.9, opacity)}`;
       circleRef.current.style.width = `${size}vmin`;
       circleRef.current.style.height = `${size}vmin`;
+
+      if (window.scrollY > window.innerHeight / 3) {
+        circleRef.current.style.opacity = "0";
+      } else {
+        circleRef.current.style.opacity = `${Math.min(0.4, opacity)}`;
+      }
     });
   };
 
@@ -30,6 +35,7 @@ function Circle() {
 
   return (
     <div className={styles.circles} id={styles.circles} ref={circleRef}>
+      <div className={styles.background} />
       <div className={styles.circle} />
       <div className={styles.circle} />
       <div className={styles.circle} />

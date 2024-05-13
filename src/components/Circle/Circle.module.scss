@@ -1,11 +1,11 @@
 @import "@/styles/variables.scss";
 @import "@/styles/responsive.scss";
 
-$spin-time: 5.5s;
+$spin-time: 6s;
 $circle-size: 50vmin;
 $circle-stroke: 2vmin;
 $displacement: 0%;
-$opacity: 0.9;
+$opacity: 0.7;
 
 .circles {
   z-index: 0;
@@ -24,41 +24,57 @@ $opacity: 0.9;
   }
 }
 
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(37, 41, 52, 0.1) 100%
+  );
+
+  animation: blink 5s linear infinite;
+  border: none;
+}
+
 .circle {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
   height: 100%;
   border: $circle-stroke solid transparent;
-  border-radius: 115% 140% 145% 110%/125% 140% 110% 125%;
+  border-radius: 115% 130% 135% 110%/120% 130% 110% 125%;
   mix-blend-mode: screen;
 
   &:nth-child(1) {
-    border-color: rgb(219, 68, 55, $opacity);
-    transform-origin: 50%-$displacement 50%;
+    border-color: rgb(232, 141, 133, $opacity);
+    transform-origin: 50% - $displacement 50%;
     animation: spin1 $spin-time linear infinite;
-    box-shadow: 0 0 7px rgb(219, 68, 55, $opacity);
+    box-shadow: 0 0 30px rgb(232, 141, 133, $opacity);
   }
 
   &:nth-child(2) {
-    border-color: rgb(244, 180, 0, $opacity);
+    border-color: rgb(239, 214, 143, $opacity);
     transform-origin: 50% 50% + $displacement;
     animation: spin2 $spin-time linear infinite;
-    box-shadow: 0 0 7px rgb(244, 180, 0, $opacity);
+    box-shadow: 0 0 30px rgb(239, 214, 143, $opacity);
   }
 
   &:nth-child(3) {
-    border-color: rgb(66, 133, 244, $opacity);
+    border-color: rgb(166, 193, 244, $opacity);
     transform-origin: 50% + $displacement 50%;
     animation: spin3 $spin-time linear infinite;
-    box-shadow: 0 0 7px rgb(66, 133, 244, $opacity);
+    box-shadow: 0 0 30px rgb(166, 193, 244, $opacity);
   }
 
   &:nth-child(4) {
-    border-color: rgb(15, 157, 88, $opacity);
-    transform-origin: 50% 50%-$displacement;
+    border-color: rgb(144, 221, 183, $opacity);
+    transform-origin: 50% 50% - $displacement;
     animation: spin4 $spin-time linear infinite;
-    box-shadow: 0 0 7px rgb(15, 157, 88, $opacity);
+    box-shadow: 0 0 30px rgb(144, 221, 183, $opacity);
   }
 }
 
@@ -119,5 +135,17 @@ $opacity: 0.9;
   }
   100% {
     opacity: 0.25;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
