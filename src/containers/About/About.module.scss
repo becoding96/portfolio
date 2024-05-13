@@ -23,7 +23,7 @@
   z-index: 5;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 70%;
+  width: 60%;
   height: 70%;
   margin: 0 auto;
   padding-top: calc($navbar-height * 5.2);
@@ -93,8 +93,8 @@
   box-shadow: 0 0 0 4px $sub;
 
   @include desktop125 {
-    width: 330px;
-    height: 330px;
+    width: 320px;
+    height: 320px;
   }
 
   @include tablet {
@@ -188,4 +188,9 @@
   100% {
     opacity: 1;
   }
+}
+
+.career-period {
+  display: inline-block;
+  width: 40%;
 }

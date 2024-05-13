@@ -49,8 +49,8 @@ function About({
           className={showImage ? styles["slide-in-left"] : styles.hidden}
           src="/profile.webp"
           quality={100}
-          width={370}
-          height={370}
+          width={350}
+          height={350}
           alt="프로필 이미지"
         />
         <div id={styles["profile-text"]}>
@@ -78,6 +78,7 @@ function About({
               <span>Redux</span>
               <span>TypeScript</span>
               <span>SCSS</span>
+              <span>MS-SQL</span>
               <span>Python</span>
               <span>Git</span>
               <span>Figma</span>
@@ -88,8 +89,20 @@ function About({
             className={showCareerDiv ? styles["slide-in-right"] : styles.hidden}
           >
             <p className={styles.subheading}>Career</p>
-            <li>2022.07 ~ 2023.06 &nbsp; 삼성 청년 SW 아카데미 8기</li>
-            <li>2015.03 ~ 2022.02 &nbsp; 부경대학교 통계학과</li>
+            <li>
+              <span className={styles["career-period"]}>
+                2024.01 ~ &nbsp; 재직중
+              </span>{" "}
+              <span>(주)케이엔아이씨 - ERP 개발</span>
+            </li>
+            <li>
+              <span className={styles["career-period"]}>2022.07 ~ 2023.06</span>{" "}
+              <span>삼성 청년 SW 아카데미 8기</span>
+            </li>
+            <li>
+              <span className={styles["career-period"]}>2015.03 ~ 2022.02</span>{" "}
+              <span>부경대학교 통계학과</span>
+            </li>
           </div>
         </div>
       </div>
