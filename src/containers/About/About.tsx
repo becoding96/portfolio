@@ -64,14 +64,16 @@ function About({
             id={styles["i-am"]}
             className={showIAmDiv ? styles["slide-in-left"] : styles.hidden}
           >
-            <p className={styles.subheading}>I am</p>
+            {/* <p className={styles.subheading}>I am</p> */}
             <h4>
               안녕하세요. <span>프론트엔드 개발자 백준봉</span>
               입니다.
             </h4>
             <p>
-              <span>꾸준한 성장</span>을 중요시하며,{" "}
-              <span>기술 스택의 특징</span>에 집중합니다.
+              <span>개발과 배움에 대해 즐거움</span>을 느끼며
+            </p>
+            <p>
+              <span>빠른 학습 속도</span>에 자신이 있습니다.
             </p>
           </div>
         </div>
@@ -117,15 +119,9 @@ function About({
             className={showCareerDiv ? styles["slide-in-right"] : styles.hidden}
           >
             <p className={styles.subheading}>Certificates</p>
-            <li>
-              <span>정보처리기사 (21.06)</span>
-            </li>
-            <li>
-              <span>SQLD (24.04)</span>
-            </li>
-            <li>
-              <span>컴퓨터 활용능력 1급 (20.03)</span>
-            </li>
+            <li>정보처리기사 (21.06)</li>
+            <li>SQLD (24.04)</li>
+            <li>컴퓨터 활용능력 1급 (20.03)</li>
           </div>
         </div>
       </div>

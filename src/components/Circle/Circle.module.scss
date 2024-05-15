@@ -7,6 +7,10 @@ $circle-stroke: 2vmin;
 $displacement: 0%;
 $opacity: 0.6;
 
+@include tablet {
+  $circle-size: 70vmin;
+}
+
 .circles {
   z-index: 0;
   height: $circle-size;
