@@ -5,7 +5,7 @@ $spin-time: 6s;
 $circle-size: 50vmin;
 $circle-stroke: 2vmin;
 $displacement: 0%;
-$opacity: 0.7;
+$opacity: 0.6;
 
 .circles {
   z-index: 0;
@@ -32,11 +32,11 @@ $opacity: 0.7;
   background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(37, 41, 52, 0.1) 100%
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(37, 41, 52, 0.15) 100%
   );
 
-  animation: blink 5s linear infinite;
+  animation: blink 4s linear infinite;
   border: none;
 }
 
@@ -50,31 +50,31 @@ $opacity: 0.7;
   mix-blend-mode: screen;
 
   &:nth-child(1) {
-    border-color: rgb(232, 141, 133, $opacity);
+    border-color: rgb(208, 176, 234, $opacity);
     transform-origin: 50% - $displacement 50%;
     animation: spin1 $spin-time linear infinite;
-    box-shadow: 0 0 30px rgb(232, 141, 133, $opacity);
+    box-shadow: 0 0 30px rgb(208, 176, 234, $opacity - 0.2);
   }
 
   &:nth-child(2) {
     border-color: rgb(239, 214, 143, $opacity);
     transform-origin: 50% 50% + $displacement;
     animation: spin2 $spin-time linear infinite;
-    box-shadow: 0 0 30px rgb(239, 214, 143, $opacity);
+    box-shadow: 0 0 30px rgb(243, 224, 173, $opacity - 0.2);
   }
 
   &:nth-child(3) {
-    border-color: rgb(166, 193, 244, $opacity);
+    border-color: rgb(176, 200, 244, $opacity);
     transform-origin: 50% + $displacement 50%;
     animation: spin3 $spin-time linear infinite;
-    box-shadow: 0 0 30px rgb(166, 193, 244, $opacity);
+    box-shadow: 0 0 30px rgb(176, 200, 244, $opacity - 0.2);
   }
 
   &:nth-child(4) {
-    border-color: rgb(144, 221, 183, $opacity);
+    border-color: rgb(171, 235, 217, $opacity);
     transform-origin: 50% 50% - $displacement;
     animation: spin4 $spin-time linear infinite;
-    box-shadow: 0 0 30px rgb(144, 221, 183, $opacity);
+    box-shadow: 0 0 30px rgb(171, 235, 217, $opacity - 0.2);
   }
 }
 
