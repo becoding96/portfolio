@@ -140,8 +140,9 @@ function RepomonModal() {
                   </li>
                   <li>
                     <span>3D 모델인 {`'레포몬'`}이 첫 페이지에서 렌더링</span>
-                    됩니다.
-                    <span> Next.js를 채택한 이유</span> 중 하나입니다.
+                    됩니다. 때문에{" "}
+                    <span> 첫화면 로딩 속도 개선을 위해 Next.js를 채택</span>
+                    하였습니다.
                   </li>
                 </details>
                 <details>
