@@ -5,7 +5,7 @@
   position: relative;
   padding: 10rem 0 0 0;
   z-index: 2;
-  min-height: 100vh;
+  min-height: 80vh;
   background: linear-gradient(0deg, rgb(8, 8, 15) 0%, $primary 100%);
 
   @include tablet {
