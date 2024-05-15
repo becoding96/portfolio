@@ -87,10 +87,16 @@
   visibility: hidden;
 }
 
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #profile-div {
   position: relative;
   margin: auto auto;
-  left: 20px;
   width: 160px;
   height: 200px;
 
@@ -104,12 +110,8 @@
     background-color: $sub;
   }
 
-  @include desktop125 {
-    left: 0;
-  }
-
   @include tablet {
-    left: 0;
+    margin: auto auto 2rem auto;
   }
 
   @include mobile {
@@ -148,6 +150,7 @@
 }
 
 #i-am {
+  text-align: center;
   color: rgba(255, 255, 255, 0.7);
 
   span {

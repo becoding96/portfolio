@@ -44,36 +44,39 @@ function About({
         direction="slide-in-left"
       />
       <div id={styles.contents}>
-        <div
-          id={styles["profile-div"]}
-          className={showImage ? styles["slide-in-left"] : styles.hidden}
-        >
-          <Image
-            id={styles["profile-image"]}
+        <div className={styles["profile-container"]}>
+          <div
+            id={styles["profile-div"]}
             className={showImage ? styles["slide-in-left"] : styles.hidden}
-            src="/profile2.webp"
-            width={160}
-            height={200}
-            quality={100}
-            alt="프로필 이미지"
-          />
-          <div className={styles["profile-shadow"]} />
-        </div>
-        <div id={styles["profile-text"]}>
+          >
+            <Image
+              id={styles["profile-image"]}
+              className={showImage ? styles["slide-in-left"] : styles.hidden}
+              src="/profile2.webp"
+              width={160}
+              height={200}
+              quality={100}
+              alt="프로필 이미지"
+            />
+            <div className={styles["profile-shadow"]} />
+          </div>
           <div
             id={styles["i-am"]}
-            className={showIAmDiv ? styles["slide-in-right"] : styles.hidden}
+            className={showIAmDiv ? styles["slide-in-left"] : styles.hidden}
           >
             <p className={styles.subheading}>I am</p>
             <h4>
               안녕하세요. <span>프론트엔드 개발자 백준봉</span>
               입니다.
             </h4>
-            <p className={styles["margin-bottom"]}>
+            <p>
               <span>꾸준한 성장</span>을 중요시하며,{" "}
               <span>기술 스택의 특징</span>에 집중합니다.
             </p>
           </div>
+        </div>
+
+        <div id={styles["profile-text"]}>
           <div
             className={showSkillsDiv ? styles["slide-in-right"] : styles.hidden}
           >
@@ -105,9 +108,23 @@ function About({
               <span className={styles["career-period"]}>2022.07 ~ 2023.06</span>{" "}
               <span>삼성 청년 SW 아카데미 8기</span>
             </li>
-            <li>
+            <li className={styles["margin-bottom"]}>
               <span className={styles["career-period"]}>2015.03 ~ 2022.02</span>{" "}
               <span>부경대학교 통계학과</span>
+            </li>
+          </div>
+          <div
+            className={showCareerDiv ? styles["slide-in-right"] : styles.hidden}
+          >
+            <p className={styles.subheading}>Certificates</p>
+            <li>
+              <span>정보처리기사 (21.06)</span>
+            </li>
+            <li>
+              <span>SQLD (24.04)</span>
+            </li>
+            <li>
+              <span>컴퓨터 활용능력 1급 (20.03)</span>
             </li>
           </div>
         </div>
