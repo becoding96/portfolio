@@ -102,16 +102,32 @@ function About({
             <p className={styles.subheading}>Career</p>
             <li>
               <span className={styles["career-period"]}>
-                2024.01 ~ &nbsp; 재직중
-              </span>{" "}
+                <div>
+                  <span>24.01</span>
+                  <span>~</span>
+                  <span>재직중</span>
+                </div>
+              </span>
               <span>(주)케이엔아이씨 - ERP 개발</span>
             </li>
             <li>
-              <span className={styles["career-period"]}>2022.07 ~ 2023.06</span>{" "}
+              <span className={styles["career-period"]}>
+                <div>
+                  <span>22.07</span>
+                  <span>~</span>
+                  <span>23.06</span>
+                </div>
+              </span>
               <span>삼성 청년 SW 아카데미 8기</span>
             </li>
             <li className={styles["margin-bottom"]}>
-              <span className={styles["career-period"]}>2015.03 ~ 2022.02</span>{" "}
+              <span className={styles["career-period"]}>
+                <div>
+                  <span>15.03</span>
+                  <span>~</span>
+                  <span>22.02</span>
+                </div>
+              </span>
               <span>부경대학교 통계학과</span>
             </li>
           </div>

@@ -207,5 +207,14 @@
 
 .career-period {
   display: inline-block;
-  width: 40%;
+  width: 35%;
+
+  div {
+    display: grid;
+    grid-template-columns: 1.5fr 0.75fr 1.5fr;
+
+    span {
+      text-align: left;
+    }
+  }
 }
