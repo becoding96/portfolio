@@ -40,8 +40,8 @@ function RepomonModal() {
               <Image
                 src={
                   imageNum <= 6
-                    ? `/Repomon/image${imageNum}.gif`
-                    : `/Repomon/image${imageNum}.webp`
+                    ? `/Repomon/imagefix${imageNum}.gif`
+                    : `/Repomon/imagefix${imageNum}.webp`
                 }
                 alt="프로젝트 이미지"
                 width={800}
