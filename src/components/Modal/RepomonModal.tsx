@@ -11,7 +11,7 @@ function RepomonModal() {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const [imageNum, setImageNum] = useState<number>(1);
-  const imageLength = 10;
+  const imageLength = 9;
 
   useModal(modalRef, modalIsOpen, setModalIsOpen);
 
@@ -39,7 +39,7 @@ function RepomonModal() {
             <div className={styles["img-div"]}>
               <Image
                 src={
-                  imageNum <= 7
+                  imageNum <= 6
                     ? `/Repomon/image${imageNum}.gif`
                     : `/Repomon/image${imageNum}.webp`
                 }
