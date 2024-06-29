@@ -154,7 +154,8 @@ function FunteerModal() {
                   첫 프로젝트라 UI/UX 측면에서 조금 더 잘하지 못해 아쉬운 점이
                   있었습니다. 그러나 학습과 병행하며 맡은 부분을 다 해결했고,
                   React, TypeScript, SCSS 등 새로운 기술 스택을 익히며{" "}
-                  <span>가장 큰 성장 폭을 보인 긍정적인 경험</span>이었습니다.
+                  <span>가장 빠르고 큰 성장 폭을 보인 긍정적인 경험</span>
+                  이었습니다.
                 </li>
               </div>
             </div>

@@ -213,10 +213,10 @@ function RepomonModal() {
                 <p className={styles.subheading}>후기</p>
                 <li>
                   Chart.js, Three.js, React-Modal과 같은 여러 라이브러리를
-                  사용하면서{" "}
+                  사용해보면서{" "}
                   <span>
-                    라이브러리의 Docs를 참고하며 원하는 정보를 찾아 커스텀하는
-                    것에 익숙
+                    라이브러리의 공식 문서를 참고하며 원하는 정보를 찾아
+                    커스텀하는 것에 익숙
                   </span>
                   해졌습니다.
                 </li>

@@ -35,6 +35,11 @@ function Projects({
         className={showProjects ? styles.visible : styles.hidden}
       >
         <ProjectCard
+          projectTitle="베코ERP"
+          projectTitleEng="BecoERP"
+          projectSummary="생산 및 재고 관리 솔루션"
+        />
+        <ProjectCard
           projectTitle="레포몬"
           projectTitleEng="Repomon"
           projectSummary="Github 레포지토리 분석 및 시각화 서비스"
