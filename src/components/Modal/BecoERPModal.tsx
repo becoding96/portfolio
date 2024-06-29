@@ -38,7 +38,7 @@ function BecoERPModal() {
           <div className={styles.modal} ref={modalRef}>
             <div className={styles["img-div"]}>
               <Image
-                src={`/BecoERP/image${imageNum}.webp`}
+                src={`/BecoERP/imageFix${imageNum}.webp`}
                 alt="프로젝트 이미지"
                 width={800}
                 height={800}
@@ -98,8 +98,8 @@ function BecoERPModal() {
                 <p className={styles.subheading}>프로젝트 소개</p>
                 <li>
                   입고된 <span>자재를 소요해 품목을 생산</span>하고, 그로 인한
-                  자재와 품목의
-                  <span>재고를 확인</span>할 수 있도록 돕는 ERP 서비스입니다.
+                  자재와 품목의 <span>재고를 확인</span>할 수 있도록 돕는 ERP
+                  서비스입니다.
                 </li>
                 <p className={styles.subheading}>프로젝트 상세</p>
                 <details>
