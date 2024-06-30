@@ -70,7 +70,7 @@ function About({
               입니다.
             </h4>
             <p>
-              <span>개발과 배움에 대해 즐거움</span>을 느끼며
+              <span>개발과 성장에 대한 즐거움</span>을 느끼며
             </p>
             <p>
               <span>빠른 학습 속도</span>에 자신이 있습니다.
