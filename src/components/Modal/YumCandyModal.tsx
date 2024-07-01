@@ -77,8 +77,18 @@ function YumCandyModal() {
                   </span>
                   입니다.
                 </li>
+                <p className={styles.subheading}>프로젝트 상세</p>
                 <li>
-                  <span>three.js 연습용</span>으로 만든 게임입니다.
+                  <span>Three.js를 이용하여 조명, 모델 모션 재생, 사탕</span>{" "}
+                  등을 표현했습니다.
+                </li>
+                <li>
+                  <span>객체를 통해 효율적으로 방향키 동시 입력을 구현</span>
+                  하여 이동과 캐릭터가 바라보는 방향이 자연스럽도록 했습니다.
+                </li>
+                <li>
+                  <span>Three.js의 Vector</span> 클래스를 이용해 변하는 사탕의
+                  위치를 모두 추적하였습니다.
                 </li>
               </div>
             </div>

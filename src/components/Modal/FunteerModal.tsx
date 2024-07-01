@@ -97,7 +97,8 @@ function FunteerModal() {
                     <span>개인과 단체에 대한 회원가입</span> 기능입니다.
                   </li>
                   <li>
-                    유효성 검사, 이메일 인증에 대한 타이머를 구현했습니다.
+                    <span>useInterval 커스텀 훅</span>을 이용해 이메일 인증에
+                    대한 타이머를 구현했습니다.
                   </li>
                 </details>
                 <details>
@@ -109,12 +110,16 @@ function FunteerModal() {
                     </span>{" "}
                     등 관리자 기능을 종합해둔 페이지입니다.
                   </li>
-                  <li>CRUD, 검색, 필터, 페이지네이션을 구현했습니다.</li>
+                  <li>
+                    <span>검색, 필터, 페이지네이션을 구현</span>해 관리에
+                    용이하도록 했습니다.
+                  </li>
                 </details>
                 <details>
                   <summary>충전 및 환불</summary>
                   <li>
-                    <span>아임포트를 이용한 충전 및 환불</span>을 구현했습니다.
+                    <span>아임포트 API를 이용해 충전 및 환불</span>을
+                    구현했습니다.
                   </li>
                 </details>
                 <details>
@@ -152,8 +157,8 @@ function FunteerModal() {
                 </li>
                 <li>
                   첫 프로젝트라 UI/UX 측면에서 조금 더 잘하지 못해 아쉬운 점이
-                  있었습니다. 그러나 학습과 병행하며 맡은 부분을 다 해결했고,
-                  React, TypeScript, SCSS 등 새로운 기술 스택을 익히며{" "}
+                  있었습니다. 그러나 맡은 부분 이상을 구현했고, React,
+                  TypeScript, SCSS 등 새로운 기술 스택을 익히며{" "}
                   <span>가장 빠르고 큰 성장 폭을 보인 긍정적인 경험</span>
                   이었습니다.
                 </li>

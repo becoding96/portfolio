@@ -129,7 +129,7 @@ function RepomonModal() {
                 <details>
                   <summary>토큰 관리</summary>
                   <li>
-                    <span>axios interceptor</span>를 이용하여{" "}
+                    <span>axios interceptor</span>를 이용하여 자동으로{" "}
                     <span>access, refresh 토큰을 관리</span>했습니다.
                   </li>
                 </details>
@@ -141,7 +141,10 @@ function RepomonModal() {
                   <li>
                     <span>3D 모델인 {`'레포몬'`}이 첫 페이지에서 렌더링</span>
                     됩니다. 때문에{" "}
-                    <span> 첫화면 로딩 속도 개선을 위해 Next.js를 채택</span>
+                    <span>
+                      {" "}
+                      첫화면 로딩 속도와 SEO 개선을 위해 Next.js를 채택
+                    </span>
                     하였습니다.
                   </li>
                 </details>
@@ -152,12 +155,13 @@ function RepomonModal() {
                     수 있는 페이지입니다.
                   </li>
                   <li>
-                    <span>프로젝트 갱신</span>: 서버에 레포지토리 갱신을
-                    요청하고, 갱신한 데이터를 재요청합니다.
+                    <span>레포몬 프로필</span>: Three.js를 이용하여 레포몬의
+                    성장에 따라 다양한 모습을 보이도록 하였습니다.
                   </li>
                   <li>
-                    <span>프로젝트 정보 설정</span>: 레포몬 이름, 프로젝트 기간,
-                    대표 레포지토리 설정 작업을 할 수 있습니다.
+                    <span>차트</span>: Chart.js를 이용하여 레포몬의 성장치와
+                    근거, 본인의 프로젝트에 대한 기여도 등을 나타냈습니다.
+                    차트는 상호작용에 따라 여러 종류를 볼 수 있게 하였습니다.
                   </li>
                   <li>
                     <span>카드 추출</span>: Github README에 활용 가능한 카드를
@@ -165,21 +169,15 @@ function RepomonModal() {
                     담습니다. 카드에 기입할 정보를 커스텀할 수 있습니다.
                   </li>
                   <li>
-                    <span>성장 탭</span>: 레포몬이 성장한 근거와 얼마나
-                    성장했는지를 나타냅니다. (chart.js)
+                    <span>배틀</span>: 다른 레포몬과 배틀을 매칭하고. 레포몬의
+                    배틀에 관한 정보(능력치, 전적, 티어 등)를 가시성 높게 볼 수
+                    있도록 했습니다.
                   </li>
                   <li>
-                    <span>컨벤션 탭</span>: 프로젝트 컨벤션을 등록 및 수정할 수
-                    있습니다. 컨벤션 준수율을 확인할 수 있습니다. (chart.js)
-                  </li>
-                  <li>
-                    <span>기여도 탭</span>: 본인의 프로젝트에 대한 기여도를 커밋
-                    수 기준으로 나타냅니다. (chart.js)
-                  </li>
-                  <li>
-                    <span>배틀 탭</span>: 다른 레포몬과 배틀을 매칭하고.
-                    레포몬의 배틀에 관한 정보(능력치, 전적, 티어 등)를 볼 수
-                    있습니다.
+                    <span>프로젝트 정보 설정</span>: react-modal, date-picker
+                    등의 라이브러리를 이용해 레포지토리 갱신, 레포몬 이름,
+                    프로젝트 기간, 대표 레포지토리 설정, 컨벤션 등록 등의 작업을
+                    할 수 있습니다.
                   </li>
                 </details>
                 <details>
