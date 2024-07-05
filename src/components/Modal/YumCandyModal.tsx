@@ -88,7 +88,7 @@ function YumCandyModal() {
                 </li>
                 <li>
                   <span>Three.js의 Vector</span> 클래스를 이용해 변하는 사탕의
-                  위치를 모두 추적하였습니다.
+                  위치를 추적하여 캐릭터와의 거리를 계산하였습니다.
                 </li>
               </div>
             </div>

@@ -150,10 +150,9 @@ function FunteerModal() {
                 </details>
                 <p className={styles.subheading}>후기</p>
                 <li>
-                  처음으로 제대로 된 프로젝트를 경험해보며 기획, 기능 정의,
-                  디자인, 개발, 발표 등의 전반적인 <span>프로젝트 과정</span>과,
-                  Git, Jira, Figma, Notion을 이용한 <span>협업</span>에
-                  익숙해졌습니다.
+                  처음 웹 프로젝트를 경험해보며 기획, 기능 정의, 디자인, 개발,
+                  발표 등의 전반적인 <span>프로젝트 과정</span>과, Git, Jira,
+                  Figma, Notion을 이용한 <span>협업</span>에 익숙해졌습니다.
                 </li>
                 <li>
                   첫 프로젝트라 UI/UX 측면에서 조금 더 잘하지 못해 아쉬운 점이
